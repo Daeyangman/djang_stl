@@ -25,9 +25,11 @@ class RegisteredView(TemplateView):
 def upload(request):
     if request.method == 'POST':
         form = UploadForm(request.POST , request.FILES)
+        from IPython import embed; embed()
         if form.is_valid():
-            stl_file = form.save(commit=False)
-            stl_file.owner = request.user
+            # stl_file = form.save(commit=False)
+            stl_file = StlFile(file=request.FILES['file'], owner=request.user)
+            # stl_file.owner = request.user
             stl_file.meshMake()
             stl_file.save()
         return redirect('threedbang:index')

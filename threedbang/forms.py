@@ -19,4 +19,4 @@ class CreateUserForm(UserCreationForm):
 class UploadForm(forms.ModelForm):
     class Meta:
         model = StlFile
-        fields = ('stl',)
+        fields = ('file',)

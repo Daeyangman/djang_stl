@@ -13,14 +13,14 @@ def user_path(instance , filename):
     return '%s/%s.%s' % (instance.owner.username , pid , extension)
 
 class StlFile(models.Model):
-    stl = models.FileField(upload_to = user_path)
-    owner = models.ForeignKey(settings.AUTH_USER_MODEL)
+    file = models.FileField(upload_to = user_path)
+    owner = models.ForeignKey(settings.AUTH_USER_MODEL, blank=True, null=True)
     pub_date = models.DateTimeField(auto_now_add=True)
     volume = models.IntegerField(default = 0)
     def meshMake(self):
         self.save()
-        self.mesh = mesh.Mesh.from_file(self.stl.path)
+        self.mesh = mesh.Mesh.from_file(self.file.path)
         self.volume ,b,c = self.mesh.get_mass_properties()
         return self.volume
     def __str__(self):
-        return "%s %s %s " % (self.owner , self.stl ,self.pub_date )
+        return "%s %s %s " % (self.owner , self.file ,self.pub_date )
