@@ -19,5 +19,4 @@ from . import views
 app_name = 'threedbang'
 urlpatterns = [
 
-    url(r'^$',  views.upload , name = 'index'),
 ]

@@ -1,5 +1,4 @@
-{% extends 'threedbang/main/base.html' %}
-{% block content %}
+
 
 {% if user.is_active %}
 <h2> Welcome, {{user.username}} </h2>
@@ -21,5 +20,4 @@
 <p> 아아디가 없으신가요 <a href = '{%url "signup"%}'>회원가입 </a></p>
 {% endif %}
 
-{% endblock %}
 

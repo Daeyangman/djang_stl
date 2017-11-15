@@ -16,13 +16,13 @@ Including another URLconf
 from django.conf.urls import url,include
 from django.contrib import admin
 from threedbang import views as threedbang_views
-
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^threedbang/', include('threedbang.urls')),
     # url(r'^$' , views.upload , name = 'root'),
-    url(r'^accounts/' , include('django.contrib.auth.urls')),
+    url(r'^accounts/login/', auth_views.login , name = 'login' ,kwargs = {'template_name': 'index-smooth-scroll.html'}),
     url(r'^account/signup$', threedbang_views.CreateUserView.as_view() , name = 'signup'),
     url(r'^account/signup/done$' , threedbang_views.RegisteredView.as_view() , name = 'create_user_done'),
     url(r'^$', threedbang_views.BootTemplateView.as_view() , name = 'bootstrap'),

@@ -8,9 +8,9 @@ from .models import StlFile
 import numpy as np
 from stl import mesh
 
-# Create your views here.
-# class IndexView(TemplateView):
-#     template_name = 'threedbang/index.html'
+
+class IndexView(TemplateView):
+    template_name = 'threedbang/index.html'
 class BootTemplateView(TemplateView):
     template_name = 'index-smooth-scroll.html'
 
@@ -32,6 +32,6 @@ def upload(request):
             # stl_file.owner = request.user
             stl_file.meshMake()
             stl_file.save()
-        return redirect('threedbang:index')
+        return redirect('bootstrap')
     form = UploadForm()
-    return render(request, 'main/index.html', {'form': form})
+    return render(request, 'index-smooth-scroll.html', {'form': form})

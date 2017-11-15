@@ -339,18 +339,16 @@
 
                     <!-- Join Form -->
 
-                    <form class="form-join" method = "post" action="{% url 'login' %}">
-                        {%csrf_token%}
-
+                    <form class="form-join">
                         <input type="hidden" name="form" value="Join Now!">
                         <div class="form-input">
-                            <input class="form-control" name="name" type="text" value = "{{user.username}}" placeholder="Name...*" required>
+                            <input class="form-control" name="name" type="text" placeholder="E-mail...*" required>
                         </div>
                         <div class="form-input">
-                            <input class="form-control" name="email" type="password" value = "{{user.password}}" placeholder="Password...*" required>
+                            <input class="form-control" name="email" type="email" placeholder="Password...*" required>
                         </div>
                         <div class="form-submit">
-                            <input class="btn btn-block btn-purple" type="submit" value="Login Now!">
+                            <input class="btn btn-block btn-purple" type="submit" value="Join Now!">
                         </div>
                     </form>
                     <!-- /Join Form -->
