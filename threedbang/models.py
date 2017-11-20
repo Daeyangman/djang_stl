@@ -17,6 +17,7 @@ class StlFile(models.Model):
     owner = models.ForeignKey(settings.AUTH_USER_MODEL, blank=True, null=True)
     pub_date = models.DateTimeField(auto_now_add=True)
     volume = models.IntegerField(default = 0)
+    thumnail_image = models.ImageField(blank = True)
     def meshMake(self):
         self.save()
         self.mesh = mesh.Mesh.from_file(self.file.path)

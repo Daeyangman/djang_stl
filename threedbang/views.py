@@ -9,11 +9,14 @@ import numpy as np
 from stl import mesh
 
 
-class IndexView(TemplateView):
-    template_name = 'threedbang/index.html'
+# class IndexView(TemplateView):
+#     template_name = 'threedbang/index.html'
 class BootTemplateView(TemplateView):
     template_name = 'index-smooth-scroll.html'
 
+class MypageTemplateView(TemplateView):
+    template_name = 'mypage.html'
+    
 class CreateUserView(CreateView):
     template_name = 'registration/signup.html'
     form_class = CreateUserForm
