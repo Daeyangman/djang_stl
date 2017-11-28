@@ -81,10 +81,11 @@
                     <div id="main-menu" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
 
+
                           <li><a class="smooth-scroll" href="{% url 'bootstrap' %}">홈</a></li>
-                          <!-- <li><a class="smooth-scroll" href="#about">방앗간 매력</a></li>
-                          <li><a class="smooth-scroll" href="#projects">방앗간 전시관</a></li>
-                          <li><a class="smooth-scroll" href="#services">다양한 서비스</a></li> -->
+                            <li><a class="smooth-scroll" href="{% url 'aboutus' %}">방앗간 소개</a></li>
+
+                            <li><a class="smooth-scroll" href="{% url 'service' %}">제공 서비스</a></li>
 
                           <li><a class="smooth-scroll" href="{% url 'mypage' %}">나의 방앗간</a></li>
                           <li><a class="smooth-scroll" href="{% url 'login' %}">로그인 하기</a></li>
@@ -108,7 +109,8 @@
 
 
                         <h1 class = 'aniamted fadeInDown wow' data-wow-delay = "0.2s"> 굿바이 </h1>
-                        <a href="{% url 'login' %}">다시 로그인 하기 </a>
+                        <a style = "font-size:15px;" href="{% url 'login' %}">다시 로그인 하기 </a>
+
 
                 </div>
             </div>

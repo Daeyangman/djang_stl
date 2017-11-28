@@ -18,6 +18,6 @@ class CreateUserForm(UserCreationForm):
 class UploadForm(forms.ModelForm):
     class Meta:
         model = StlFile
-        fields = ('file',)
+        fields = ('file', 'comment')
         exclude = ('thumnail_image', 'owner')
         

@@ -60,7 +60,7 @@
 
                             <!-- Logo Big -->
                             <div class="big">
-                                <span class="icon_cogs"></span> 3D Bang At Gan
+                                <span class="icon_cogs"></span> 3D 방앗간
                             </div>
                             <!-- /Logo Big -->
 
@@ -81,15 +81,14 @@
                         <ul class="nav navbar-nav navbar-right">
 
                             <li><a class="smooth-scroll" href="{% url 'bootstrap' %}">홈</a></li>
-                            <li><a class="smooth-scroll" href="#about">방앗간 매력</a></li>
-                            <li><a class="smooth-scroll" href="#projects">방앗간 전시관</a></li>
-                            <li><a class="smooth-scroll" href="#services">다양한 서비스</a></li>
+                            <li><a class="smooth-scroll" href="{% url 'aboutus' %}">방앗간 소개</a></li>
+                            <li><a class="smooth-scroll" href="{% url 'service' %}">제공 서비스</a></li>
 
                             <li><a class="smooth-scroll" href="{% url 'mypage' %}">나의 방앗간</a></li>
                             <li><a class="smooth-scroll" href="{% url 'login' %}">로그인 하기</a></li>
 
                           <!-- /Navigation -->
-                    
+
                         </ul>
                     </div>
                     <!-- /Navigation -->
@@ -103,16 +102,16 @@
     <!-- Slider -->
     <div id="carousel-home" class="slider owl-carousel owl-theme">
         <!-- Slide -->
-        <div class="item mask mask-black" style="background: url(/static/images/home1.jpeg) ; no-repeat center top / cover;" data-stellar-background-ratio="0.4">
+        <div class="item mask mask-black" style="background: url(/static/images/home4.jpeg) ; no-repeat center top / cover;" data-stellar-background-ratio="0.4">
             <div class="full-wh relative" data-stellar-ratio="0.5">
                 <div class="container" >
                     <div class="col-md-6 col-md-offset-2 relative">
                         <h1 class="animated fadeInDown wow" data-wow-delay="0.2s">Make Your Freedom</h1>
                         <div class="subtitle animated fadeInUp wow" data-wow-duration="0.9s" data-wow-delay="0.5s">
-                              3d 방앗간을 통해 여러분이 상상만 하던 제품 / 모델을 현실에서 구현해보세요. <br>멋진 미래가 펼쳐질 겁니다.
+                              3d 방앗간은 <strong style = "text-decoration:underline">3d 모델링 설계 / 프린팅 출력 서비스</strong>를 통해<br> 여러분들의 상상을 현실로 제공해드리고자 합니다
                         </div>
                         <div class="animated fadeInUp wow" data-wow-delay="1.0s">
-                            <a  href="#makeuser" class="btn btn-rounded btn-white-o smooth-scroll">회원 가입</a>
+                            <a  href="{% url 'signup' %}" class="btn btn-rounded btn-white-o smooth-scroll">회원 가입</a>
                         </div>
                     </div>
                 </div>
@@ -122,16 +121,16 @@
 
         <!-- Slide -->
 
-        <div class="item mask mask-black" style="background: url(/static/images/home2.jpeg) no-repeat center top / cover;" data-stellar-background-ratio="0.4">
+        <div class="item mask mask-black" style="background: url(/static/images/home3.jpeg) no-repeat center top / cover;" data-stellar-background-ratio="0.4">
             <div class="full-wh relative" data-stellar-ratio="0.5">
                 <div class="container" >
                     <div class="col-md-6 col-md-offset-2 relative">
                         <h1 class="animated fadeInDown wow" data-wow-delay="0.2s">Make Your 3d Model</h1>
                         <div class="subtitle animated fadeInUp wow" data-wow-duration="0.9s" data-wow-delay="0.5s">
-                            3d 방앗간을 통해 여러분이 상상만 하던 제품 / 모델을 현실에서 구현해보세요. <br>멋진 미래가 펼쳐질 겁니다.
+                            3d 방앗간을 통해 여러분이 상상만 하던 제품 / 모델을 현실에서 구현해보세요.<br>멋진 미래가 펼쳐질 겁니다.
                         </div>
                         <div class="animated fadeInUp wow" data-wow-delay="1.0s">
-                            <a  href="#makeuser" class="btn btn-rounded btn-white-o smooth-scroll">회원 가입</a>
+                            <a  href="{% url 'signup' %}" class="btn btn-rounded btn-white-o smooth-scroll">회원 가입</a>
                         </div>
                     </div>
                 </div>
@@ -146,619 +145,417 @@
 <!-- /Header -->
 
 <!-- Main -->
-<main class="main-container">
+<!--<main class="main-container">-->
 
-    <!-- Section: About -->
-    <section id="about" class="section">
-        <div class="container">
+    <!--&lt;!&ndash; Section: About &ndash;&gt;-->
+    <!--<section id="about" class="section">-->
+        <!--<div class="container">-->
 
-            <!-- Section Header -->
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3">
-                    <header class="text-center">
-                        <h2 class="section-title underline">About Us</h2>
-                        <p class="section-subtitle">
-                            3D 방앗간은 저렴한 가격 , 24시간 견적 출력 서비스 , 365일 연중무휴 , 다양한 방식의 출력등을
-                            제공합니다
-                        </p>
-                    </header>
-                </div>
-            </div>
-            <!-- /Section Header -->
+            <!--&lt;!&ndash; Section Header &ndash;&gt;-->
+            <!--<div class="row">-->
+                <!--<div class="col-md-6 col-md-offset-3">-->
+                    <!--<header class="text-center">-->
+                        <!--<h2 class="section-title underline">About Us</h2>-->
+                        <!--<p class="section-subtitle">-->
+                            <!--3D 방앗간은 저렴한 가격 , 24시간 견적 출력 서비스 , 365일 연중무휴 , 다양한 방식의 출력등을-->
+                            <!--제공합니다-->
+                        <!--</p>-->
+                    <!--</header>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /Section Header &ndash;&gt;-->
 
-            <!-- Section Content -->
-            <div class="row section-content">
+            <!--&lt;!&ndash; Section Content &ndash;&gt;-->
+            <!--<div class="row section-content">-->
 
-                <!-- About Block -->
-                <div class="col-md-3 col-sm-6 col animated fadeIn wow" data-wow-duration="0.9s">
-                    <span class="glyphicon glyphicon-time" style ></span>
-                    <h3 class="title">24hour Available</h3>
-                    <p class="description">
-                        방앗간은 쉴틈이 없이 돌아갑니다. 24시간 상담 및 견적 그리고 출력 가능합니다
-                    </p>
-                </div>
-                <!-- /About Block -->
+                <!--&lt;!&ndash; About Block &ndash;&gt;-->
+                <!--<div class="col-md-3 col-sm-6 col animated fadeIn wow" data-wow-duration="0.9s">-->
+                    <!--<span class="glyphicon glyphicon-time" style ></span>-->
+                    <!--<h3 class="title">24hour Available</h3>-->
+                    <!--<p class="description">-->
+                        <!--방앗간은 쉴틈이 없이 돌아갑니다. 24시간 상담 및 견적 그리고 출력 가능합니다-->
+                    <!--</p>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /About Block &ndash;&gt;-->
 
-                <!-- About Block -->
-                <div class="col-md-3 col-sm-6 col animated fadeIn wow" data-wow-duration="0.9s" data-wow-delay="0.2s">
-                    <i class="glyphicon glyphicon-usd"></i>
-                    <h3 class="title">Cheapest Price</h3>
-                    <p class="description">
-                        업계 최저가를 보장합니다.(feat High qualities)
-                    </p>
-                </div>
-                <!-- /About Block -->
+                <!--&lt;!&ndash; About Block &ndash;&gt;-->
+                <!--<div class="col-md-3 col-sm-6 col animated fadeIn wow" data-wow-duration="0.9s" data-wow-delay="0.2s">-->
+                    <!--<i class="glyphicon glyphicon-usd"></i>-->
+                    <!--<h3 class="title">Cheapest Price</h3>-->
+                    <!--<p class="description">-->
+                        <!--업계 최저가를 보장합니다.(feat High qualities)-->
+                    <!--</p>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /About Block &ndash;&gt;-->
 
-                <!-- About Block -->
-                <div class="col-md-3 col-sm-6 col animated fadeIn wow" data-wow-duration="0.9s" data-wow-delay="0.4s">
-                    <span class="glyphicon glyphicon-transfer"></span>
-                    <h3 class="title">Machine Learning</h3>
-                    <p class="description">
-                        인공지능 알고리즘을 활용한 프린팅 Process 구축을 통해 가장 쉽고 빠르게 대응이 가능합니다
-                    </p>
-                </div>
-                <!-- /About Block -->
+                <!--&lt;!&ndash; About Block &ndash;&gt;-->
+                <!--<div class="col-md-3 col-sm-6 col animated fadeIn wow" data-wow-duration="0.9s" data-wow-delay="0.4s">-->
+                    <!--<span class="glyphicon glyphicon-transfer"></span>-->
+                    <!--<h3 class="title">Machine Learning</h3>-->
+                    <!--<p class="description">-->
+                        <!--인공지능 알고리즘을 활용한 프린팅 Process 구축을 통해 가장 쉽고 빠르게 대응이 가능합니다-->
+                    <!--</p>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /About Block &ndash;&gt;-->
 
-                <!-- About Block -->
-                <div class="col-md-3 col-sm-6 col animated fadeIn wow" data-wow-duration="0.9s" data-wow-delay="0.6s">
-                    <span class="glyphicon glyphicon-th-list"></span>
-                    <h3 class="title">Variety</h3>
-                    <p class="description">
-                        FDM , SLA등의 프린팅 방식과 다양한 재질이<br> 가능합니다.
-                    </p>
-                </div>
-                <!-- /About Block -->
+                <!--&lt;!&ndash; About Block &ndash;&gt;-->
+                <!--<div class="col-md-3 col-sm-6 col animated fadeIn wow" data-wow-duration="0.9s" data-wow-delay="0.6s">-->
+                    <!--<span class="glyphicon glyphicon-th-list"></span>-->
+                    <!--<h3 class="title">Variety</h3>-->
+                    <!--<p class="description">-->
+                        <!--FDM , SLA등의 프린팅 방식과 다양한 재질이<br> 가능합니다.-->
+                    <!--</p>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /About Block &ndash;&gt;-->
 
 
-            </div>
-            <!-- /Section Content -->
+            <!--</div>-->
+            <!--&lt;!&ndash; /Section Content &ndash;&gt;-->
 
-        </div>
-    </section>
-    <!-- /Section: About -->
+        <!--</div>-->
+    <!--</section>-->
+    <!--&lt;!&ndash; /Section: About &ndash;&gt;-->
 
-    <!-- Section: Projects -->
-    <section id="projects" class="section section-small no-pb bg-light-gray">
-        <div class="container-fluid">
+    <!--&lt;!&ndash; Section: Projects &ndash;&gt;-->
+    <!--<section id="projects" class="section section-small no-pb bg-light-gray">-->
+        <!--<div class="container-fluid">-->
 
-            <!-- Section Header -->
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3">
-                    <header class="text-center">
-                        <h2 class="section-title underline">Latest Projects</h2>
-                        <p class="section-subtitle">
-                            3d 방앗간을 통해 제작한 Portpolio 제작
-                        </p>
-                    </header>
-                </div>
-            </div>
-            <!-- /Section Header -->
+            <!--&lt;!&ndash; Section Header &ndash;&gt;-->
+            <!--<div class="row">-->
+                <!--<div class="col-md-6 col-md-offset-3">-->
+                    <!--<header class="text-center">-->
+                        <!--<h2 class="section-title underline">Latest Projects</h2>-->
+                        <!--<p class="section-subtitle">-->
+                            <!--3d 방앗간을 통해 제작한 Portpolio 제작-->
+                        <!--</p>-->
+                    <!--</header>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /Section Header &ndash;&gt;-->
 
-            <div class="row section-content animated fadeIn wow" data-wow-duration="0.9s">
+            <!--<div class="row section-content animated fadeIn wow" data-wow-duration="0.9s">-->
 
-                <!-- Project Image -->
-                <div class="col-md-3 col-sm-6 col-xs-12 project-col">
-                    <a href="{% static 'images/project01.jpg' %}" class="project-item image-popup">
-                        <div class="gallery-image">
-                            <img src="{% static 'images/project01.jpg' %}" alt="">
-                        </div>
-                    </a>
-                </div>
-                <!-- /Project Image -->
+                <!--&lt;!&ndash; Project Image &ndash;&gt;-->
+                <!--<div class="col-md-3 col-sm-6 col-xs-12 project-col">-->
+                    <!--<a href="{% static 'images/project01.jpg' %}" class="project-item image-popup">-->
+                        <!--<div class="gallery-image">-->
+                            <!--<img src="{% static 'images/project01.jpg' %}" alt="">-->
+                        <!--</div>-->
+                    <!--</a>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /Project Image &ndash;&gt;-->
 
-                <!-- Project Image -->
-                <div class="col-md-3 col-sm-6 col-xs-12 project-col">
-                    <a href="{% static 'images/project02.jpg' %}" class="project-item image-popup">
-                        <div class="gallery-image">
-                            <img src="{% static 'images/project02.jpg' %}" alt="">
-                        </div>
-                    </a>
-                </div>
-                <!-- /Project Image -->
+                <!--&lt;!&ndash; Project Image &ndash;&gt;-->
+                <!--<div class="col-md-3 col-sm-6 col-xs-12 project-col">-->
+                    <!--<a href="{% static 'images/project02.jpg' %}" class="project-item image-popup">-->
+                        <!--<div class="gallery-image">-->
+                            <!--<img src="{% static 'images/project02.jpg' %}" alt="">-->
+                        <!--</div>-->
+                    <!--</a>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /Project Image &ndash;&gt;-->
 
-                <!-- Project Image -->
-                <div class="col-md-3 col-sm-6 col-xs-12 project-col">
-                    <a href="{% static 'images/project03.jpg' %}" class="project-item image-popup">
-                        <div class="gallery-image">
-                            <img src="{% static 'images/project03.jpg' %}" alt="">
-                        </div>
-                    </a>
-                </div>
-                <!-- /Project Image -->
+                <!--&lt;!&ndash; Project Image &ndash;&gt;-->
+                <!--<div class="col-md-3 col-sm-6 col-xs-12 project-col">-->
+                    <!--<a href="{% static 'images/project03.jpg' %}" class="project-item image-popup">-->
+                        <!--<div class="gallery-image">-->
+                            <!--<img src="{% static 'images/project03.jpg' %}" alt="">-->
+                        <!--</div>-->
+                    <!--</a>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /Project Image &ndash;&gt;-->
 
-                <!-- Project Image -->
-                <div class="col-md-3 col-sm-6 col-xs-12 project-col">
-                    <a href="{% static 'images/project04.jpg' %}" class="project-item image-popup">
-                        <div class="gallery-image">
-                            <img src="{% static 'images/project04.jpg' %}" alt="">
-                        </div>
-                    </a>
-                </div>
-                <!-- /Project Image -->
+                <!--&lt;!&ndash; Project Image &ndash;&gt;-->
+                <!--<div class="col-md-3 col-sm-6 col-xs-12 project-col">-->
+                    <!--<a href="{% static 'images/project04.jpg' %}" class="project-item image-popup">-->
+                        <!--<div class="gallery-image">-->
+                            <!--<img src="{% static 'images/project04.jpg' %}" alt="">-->
+                        <!--</div>-->
+                    <!--</a>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /Project Image &ndash;&gt;-->
 
-                <!-- Project Image -->
-                <div class="col-md-3 col-sm-6 col-xs-12 project-col">
-                    <a href="{% static 'images/project05.jpg' %}" class="project-item image-popup">
-                        <div class="gallery-image">
-                            <img src="{% static 'images/project05.jpg' %}" alt="">
-                        </div>
-                    </a>
-                </div>
-                <!-- /Project Image -->
+                <!--&lt;!&ndash; Project Image &ndash;&gt;-->
+                <!--<div class="col-md-3 col-sm-6 col-xs-12 project-col">-->
+                    <!--<a href="{% static 'images/project05.jpg' %}" class="project-item image-popup">-->
+                        <!--<div class="gallery-image">-->
+                            <!--<img src="{% static 'images/project05.jpg' %}" alt="">-->
+                        <!--</div>-->
+                    <!--</a>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /Project Image &ndash;&gt;-->
 
-                <!-- Project Image -->
-                <div class="col-md-3 col-sm-6 col-xs-12 project-col">
-                    <a href="{% static 'images/project06.jpg' %}" class="project-item image-popup">
-                        <div class="gallery-image">
-                            <img src="{% static 'images/project06.jpg' %}" alt="">
-                        </div>
-                    </a>
-                </div>
-                <!-- /Project Image -->
+                <!--&lt;!&ndash; Project Image &ndash;&gt;-->
+                <!--<div class="col-md-3 col-sm-6 col-xs-12 project-col">-->
+                    <!--<a href="{% static 'images/project06.jpg' %}" class="project-item image-popup">-->
+                        <!--<div class="gallery-image">-->
+                            <!--<img src="{% static 'images/project06.jpg' %}" alt="">-->
+                        <!--</div>-->
+                    <!--</a>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /Project Image &ndash;&gt;-->
 
-                <!-- Project Image -->
-                <div class="col-md-3 col-sm-6 col-xs-12 project-col">
-                    <a href="{% static 'images/project07.jpg' %}" class="project-item image-popup">
-                        <div class="gallery-image">
-                            <img src="{% static 'images/project07.jpg' %}" alt="">
-                        </div>
-                    </a>
-                </div>
-                <!-- /Project Image -->
+                <!--&lt;!&ndash; Project Image &ndash;&gt;-->
+                <!--<div class="col-md-3 col-sm-6 col-xs-12 project-col">-->
+                    <!--<a href="{% static 'images/project07.jpg' %}" class="project-item image-popup">-->
+                        <!--<div class="gallery-image">-->
+                            <!--<img src="{% static 'images/project07.jpg' %}" alt="">-->
+                        <!--</div>-->
+                    <!--</a>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /Project Image &ndash;&gt;-->
 
-                <!-- Project Image -->
-                <div class="col-md-3 col-sm-6 col-xs-12 project-col">
-                    <a href="{% static 'images/project08.jpg' %}" class="project-item image-popup">
-                        <div class="gallery-image">
-                            <img src="{% static 'images/project08.jpg' %}" alt="">
-                        </div>
-                    </a>
-                </div>
-                <!-- /Project Image -->
+                <!--&lt;!&ndash; Project Image &ndash;&gt;-->
+                <!--<div class="col-md-3 col-sm-6 col-xs-12 project-col">-->
+                    <!--<a href="{% static 'images/project08.jpg' %}" class="project-item image-popup">-->
+                        <!--<div class="gallery-image">-->
+                            <!--<img src="{% static 'images/project08.jpg' %}" alt="">-->
+                        <!--</div>-->
+                    <!--</a>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /Project Image &ndash;&gt;-->
 
-            </div>
+            <!--</div>-->
 
-        </div>
-    </section>
+        <!--</div>-->
+    <!--</section>-->
     <!-- /Section: Projects -->
 
 
 
     <!-- /Trigger: Join -->
 
-    <!-- Section: Services -->
-    <section id="services" class="section">
-        <div class="container">
-
-            <!-- Section Header -->
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3">
-                    <header class="text-center">
-                        <h2 class="section-title underline">Services</h2>
-                        <p class="section-subtitle">
-                            3d 방앗간에서는 다양한 방식의 3d 프린팅 출력 대행 서비스를 제공하고 있습니다. 모든 서비스는 실시간으로 모델에 대한 분석 및
-                            현재 출력 리스트에 맞춰 출력 시간과 견적을 메일로 발송해드리며 별도의 가입없이<br>이메일/패스워드만으로 서비스를 이용가능합니다.
-                        </p>
-                    </header>
-                </div>
-            </div>
-            <!-- /Section Header -->
-
-            <!-- Section Content -->
-            <div class="row section-content">
-
-                <!-- Service Block -->
-                <div class="service clearfix">
-
-                    <!-- Service Image -->
-                    <div class="col-sm-5 col-sm-offset-1 col-xs-12 hidden-xs animated fadeInLeft wow" data-wow-duration="1.5s">
-                        <div class="image">
-                            <img src="{% static 'images/devices2.png' %}" alt="">
-                        </div>
-                    </div>
-                    <!-- /Service Image -->
-
-                    <!-- Service Description -->
-                    <div class="col-sm-5 col-xs-12 animated fadeIn wow" data-wow-duration="0.9s">
-                        <h3 class="title">SLA Printing Service</h3>
-                        <p class="description">
-                            레이저 방식으로 높은 정밀도 , 최대 0.05mm 얇은 막 , 별도의 후가공이 없을 정도의 High Quality<br>
-                            아주 미세하고 , 작은 부품들에 적합합니다. 가격이 높은 편입니다
-                        </p>
-                        <a href="#" class="btn btn-theme" data-toggle="modal" data-target="#get-in-touch">Get In Touch</a>
-                    </div>
-                    <!-- /Service Description -->
-
-                </div>
-                <!-- /Service Block -->
-
-                <!-- Service Block -->
-                <div class="service clearfix">
-
-                    <!-- Service Description -->
-                    <div class="col-sm-5 col-sm-offset-1 col-xs-12 animated fadeIn wow" data-wow-duration="0.9s">
-                        <h3 class="title">FDM Service</h3>
-                        <p class="description">
-                            겹겹이 적층 방식으로 , 가격경쟁력이 우수하며 프린팅 시간이 빨라서 가장 많이 쓰여진다<br>
-                            방앗간에는 가장 팬덤이미 많은 미국의 Makergear 사의 M2를 통해 제공됩니다
-                        </p>
-                        <a href="#" class="btn btn-theme" data-toggle="modal" data-target="#get-in-touch">Get In Touch</a>
-                    </div>
-                    <!-- /Service Description -->
-
-                    <!-- Service Image -->
-                    <div class="col-sm-5 col-xs-12 hidden-xs animated fadeInRight wow" data-wow-duration="1.5s">
-                        <div class="image">
-                            <img src="{% static 'images/frontend2.png' %}" alt="">
-                        </div>
-                    </div>
-                    <!-- /Service Image -->
-
-                </div>
-                <!-- /Service Block -->
-
-                <!-- Service Block -->
-                <div class="service clearfix">
-
-                    <!-- Service Image -->
-                    <div class="col-sm-5 col-sm-offset-1 col-xs-12 hidden-xs animated fadeInLeft wow" data-wow-duration="1.5s">
-                        <div class="image">
-                            <img src="{% static 'images/plot2.png' %}" alt="">
-                        </div>
-                    </div>
-                    <!-- /Service Image -->
-
-                    <!-- Service Description -->
-                    <div class="col-sm-5 col-xs-12 animated fadeIn wow" data-wow-duration="0.9s">
-                        <h3 class="title">Free Printing Service!!</h3>
-                        <p class="description">
-                            저렴한 FDM 방식의 , 재료비는 방앗간에서 냅니다. 주머니 사정이 가벼운 분들을 위해
-                            빠르게 모델을 제작전 검증해보고 싶은 분들에게 추천드립니다
-                        </p>
-                        <a href="#" class="btn btn-theme" data-toggle="modal" data-target="#get-in-touch">Get In Touch</a>
-                    </div>
-                    <!-- /Service Description -->
-
-                </div>
-                <!-- /Service Block -->
-
-            </div>
-            <!-- /Section Content -->
-
-        </div>
-    </section>
-    <!-- /Section: Services -->
-
-
-
-
-    <section id="mypage" class="section">
-        <div class="container">
-
-            <!-- Section Header -->
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3">
-                    <header class="text-center">
-                        <h2 class="section-title underline">Our Clients About Us</h2>
-                        <p class="section-subtitle">
-                           국내외 많은 기업 및 기관 그리고 학생들이 3D 방앗간을 이미 이용하고 계십니다. <br>여러분도 그 중에 하나가 되어보시지 않으시겠어요?
-                        </p>
-                    </header>
-                </div>
-            </div>
-            <!-- /Section Header -->
-
-            <!-- Section Content -->
-            <div class="row section-content">
-                <div class="col-md-12">
-
-                    <!-- mypage Carousel -->
-                    <div id="carousel-mypage" class="owl-carousel owl-theme animated fadeIn wow" data-wow-duration="0.9s">
-
-                        <!-- Testimonial Block -->
-                        <div class="item">
-                            <div class="testimonial">
-                                <div class="text">
-                                    Maestro , 성모병원 , zenomix
-                                </div>
-                                <div class="media">
-                                    <div class="media-left">
-                                        <div class="image">
-                                            <img src="{% static 'images/author-image-01.jpg' %}" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="media-body media-middle author h4">
-                                        Jeremy Scott
-                                        <span class="company">Company Name</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /Testimonial Block -->
-
-                        <!-- Testimonial Block -->
-                        <div class="item">
-                            <div class="testimonial">
-                                <div class="text">
-                                    It is a long established fact that a reader will be distracted by the readable content of a
-                                    page when looking at its layout.
-                                </div>
-                                <div class="media">
-                                    <div class="media-left">
-                                        <div class="image">
-                                            <img src="{% static 'images/author-image-02.jpg' %}" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="media-body media-middle author h4">
-                                        Ann Harper
-                                        <span class="company">Company Name</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /Testimonial Block -->
-
-                        <!-- Testimonial Block -->
-                        <div class="item">
-                            <div class="testimonial">
-                                <div class="text">
-                                    It is a long established fact that a reader will be distracted by the readable content of a
-                                    page when looking at its layout.
-                                </div>
-                                <div class="media">
-                                    <div class="media-left">
-                                        <div class="image">
-                                            <img src="{% static 'images/author-image-03.jpg' %}" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="media-body media-middle author h4">
-                                        William Bell
-                                        <span class="company">Company Name</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /Testimonial Block -->
-
-                        <!-- Testimonial Block -->
-                        <div class="item">
-                            <div class="testimonial">
-                                <div class="text">
-                                    It is a long established fact that a reader will be distracted by the readable content of a
-                                    page when looking at its layout.
-                                </div>
-                                <div class="media">
-                                    <div class="media-left">
-                                        <div class="image">
-                                            <img src="{% static 'images/author-image-04.jpg' %}" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="media-body media-middle author h4">
-                                        Gerald Payne
-                                        <span class="company">Company Name</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /Testimonial Block -->
-
-                    </div>
-                    <!-- /mypage Carousel -->
-
-                </div>
-            </div>
-            <!-- /Section Content -->
-
-        </div>
-    </section>
-
-    <!-- Section: Price -->
-    <section id="price" class="section bg-theme">
-        <div class="container">
-
-            <!-- Section Header -->
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3">
-                    <header class="text-center">
-                        <h2 class="section-title underline text-white">Select Best Plan for You</h2>
-                        <p class="section-subtitle text-white">
-                            There are many variations of passages of Lorem Ipsum available, but the majority have suffered
-                            alteration in some form, by injected humour.
-                        </p>
-                    </header>
-                </div>
-            </div>
-            <!-- /Section Header -->
-
-            <!-- Section Content -->
-            <div class="row section-content">
-
-                <!-- Plan -->
-                <div class="col-md-3 col-sm-6 animated fadeIn wow" data-wow-duration="0.9s">
-                    <div class="plan">
-
-                        <div class="price">
-                            <span class="dollar">Sanding</span>
-                        </div>
-
-                        <h3 class="name text-center">Advanced</h3>
-
-                        <ul class="features">
-                            <li>There are many variations</li>
-                            <li>Of passages</li>
-                            <li>Of Lorem Ipsum available</li>
-                            <li>But the majority</li>
-                            <li>have suffered alteration</li>
-                        </ul>
-
-                        <a href="#" class="btn btn-theme"><i class="icon fa fa-fw fa-check"></i> <span class="text">Select Plan</span></a>
-
-                    </div>
-                </div>
-                <!-- /Plan -->
-
-                <!-- Plan -->
-                <div class="col-md-3 col-sm-6 animated fadeIn wow" data-wow-duration="0.9s" data-wow-delay="0.2s">
-                    <div class="plan">
-
-                        <div class="price">
-                            <span class="dollar">3D Modeling</span>
-                        </div>
-
-                        <h3 class="name text-center">Advanced</h3>
-
-                        <ul class="features">
-                            <li>There are many variations</li>
-                            <li>Of passages</li>
-                            <li>Of Lorem Ipsum available</li>
-                            <li>But the majority</li>
-                            <li>have suffered alteration</li>
-                        </ul>
-
-                        <a href="#" class="btn btn-theme"><i class="icon fa fa-fw fa-check"></i> <span class="text">Select Plan</span></a>
-
-                    </div>
-                </div>
-                <!-- /Plan -->
-
-                <!-- Plan -->
-                <div class="col-md-3 col-sm-6 animated bounceIn wow" data-wow-duration="0.9s" data-wow-delay="0.6s">
-                    <div class="plan">
-
-                        <div class="price">
-                            <span class="dollar">3D Printing</span>
-                        </div>
-
-                        <h3 class="name text-center">Basic</h3>
-
-                        <ul class="features">
-                            <li>There are many variations</li>
-                            <li>Of passages</li>
-                            <li>Of Lorem Ipsum available</li>
-                            <li>But the majority</li>
-                            <li>have suffered alteration</li>
-                        </ul>
-
-                        <a href="#" class="btn btn-theme"><i class="icon fa fa-fw fa-check"></i> <span class="text">Select Plan</span></a>
-
-                    </div>
-                </div>
-                <!-- /Plan -->
-
-                <!-- Plan -->
-                <div class="col-md-3 col-sm-6 animated fadeIn wow" data-wow-duration="0.9s" data-wow-delay="0.4s">
-                    <div class="plan">
-
-                        <div class="price">
-                            <span class="dollar">Painting</span>
-                        </div>
-
-                        <h3 class="name text-center">Advanced</h3>
-
-                        <ul class="features">
-                            <li>There are many variations</li>
-                            <li>Of passages</li>
-                            <li>Of Lorem Ipsum available</li>
-                            <li>But the majority</li>
-                            <li>have suffered alteration</li>
-                        </ul>
-
-                        <a href="#" class="btn btn-theme"><i class="icon fa fa-fw fa-check"></i> <span class="text">Select Plan</span></a>
-
-                    </div>
-                </div>
-                <!-- /Plan -->
-
-            </div>
-            <!-- /Section Content -->
-
-        </div>
-    </section>
-
-
-    <!-- Section: Clients -->
-    <section id="clients" class="section section-small bg-light-gray">
-        <div class="container">
-
-            <!-- Section Header -->
-            <div class="row" style="display: none;">
-                <div class="col-md-6 col-md-offset-3">
-                    <header class="text-center">
-                        <h2 class="section-title underline">Clients</h2>
-                        <p class="section-subtitle">
-                            There are many variations of passages of Lorem Ipsum available, but the majority have suffered
-                            alteration in some form, by injected humour.
-                        </p>
-                    </header>
-                </div>
-            </div>
-            <!-- /Section Header -->
-
-            <!-- Section Content -->
-            <div class="row">
-                <div class="col-md-12">
-
-                    <!-- Clients Carousel -->
-                    <div id="carousel-clients" class="owl-carousel owl-theme">
-
-                        <!-- Client Logo -->
-                        <div class="item client">
-                            <div class="image">
-                                <img src="{% static 'images/logo3.png' %}" alt="">
-                            </div>
-                        </div>
-                        <!-- /Client Logo -->
-
-                        <!-- Client Logo -->
-                        <div class="item client">
-                            <div class="image">
-                                <img src="{% static 'images/logo3.png' %}" alt="">
-                            </div>
-                        </div>
-                        <!-- /Client Logo -->
-
-                        <!-- Client Logo -->
-                        <div class="item client">
-                            <div class="image">
-                                <img src="{% static 'images/logo3.png' %}" alt="">
-                            </div>
-                        </div>
-                        <!-- /Client Logo -->
-
-                        <!-- Client Logo -->
-                        <div class="item client">
-                            <div class="image">
-                                <img src="{% static 'images/logo3.png' %}" alt="">
-                            </div>
-                        </div>
-                        <!-- /Client Logo -->
-
-                        <!-- Client Logo -->
-                        <div class="item client">
-                            <div class="image">
-                                <img src="{% static 'images/logo3.png' %}" alt="">
-                            </div>
-                        </div>
-                        <!-- /Client Logo -->
-
-                        <!-- Client Logo -->
-                        <!--<div class="item client">-->
-                            <!--<div class="image">-->
-                                <!--<img src="{% static 'images/logo2.png' %}" alt="">-->
-                            <!--</div>-->
+    <!--&lt;!&ndash; Section: Services &ndash;&gt;-->
+    <!--<section id="services" class="section">-->
+        <!--<div class="container">-->
+
+            <!--&lt;!&ndash; Section Header &ndash;&gt;-->
+            <!--<div class="row">-->
+                <!--<div class="col-md-6 col-md-offset-3">-->
+                    <!--<header class="text-center">-->
+                        <!--<h2 class="section-title underline">Services</h2>-->
+                        <!--<p class="section-subtitle">-->
+                            <!--3d 방앗간에서는 다양한 방식의 3d 프린팅 출력 대행 서비스를 제공하고 있습니다. 모든 서비스는 실시간으로 모델에 대한 분석 및-->
+                            <!--현재 출력 리스트에 맞춰 출력 시간과 견적을 메일로 발송해드리며 별도의 가입없이<br>이메일/패스워드만으로 서비스를 이용가능합니다.-->
+                        <!--</p>-->
+                    <!--</header>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /Section Header &ndash;&gt;-->
+
+            <!--&lt;!&ndash; Section Content &ndash;&gt;-->
+            <!--<div class="row section-content">-->
+
+                <!--&lt;!&ndash; Service Block &ndash;&gt;-->
+                <!--<div class="service clearfix">-->
+
+                    <!--&lt;!&ndash; Service Image &ndash;&gt;-->
+                    <!--<div class="col-sm-5 col-sm-offset-1 col-xs-12 hidden-xs animated fadeInLeft wow" data-wow-duration="1.5s">-->
+                        <!--<div class="image">-->
+                            <!--<img src="{% static 'images/devices2.png' %}" alt="">-->
                         <!--</div>-->
-                        <!-- /Client Logo -->
+                    <!--</div>-->
+                    <!--&lt;!&ndash; /Service Image &ndash;&gt;-->
 
-                    </div>
-                    <!-- /Clients Carousel -->
+                    <!--&lt;!&ndash; Service Description &ndash;&gt;-->
+                    <!--<div class="col-sm-5 col-xs-12 animated fadeIn wow" data-wow-duration="0.9s">-->
+                        <!--<h3 class="title">SLA Printing Service</h3>-->
+                        <!--<p class="description">-->
+                            <!--레이저 방식으로 높은 정밀도 , 최대 0.05mm 얇은 막 , 별도의 후가공이 없을 정도의 High Quality<br>-->
+                            <!--아주 미세하고 , 작은 부품들에 적합합니다. 가격이 높은 편입니다-->
+                        <!--</p>-->
+                        <!--<a href="#" class="btn btn-theme" data-toggle="modal" data-target="#get-in-touch">Get In Touch</a>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash; /Service Description &ndash;&gt;-->
 
-                </div>
-            </div>
-            <!-- /Section Content -->
+                <!--</div>-->
+                <!--&lt;!&ndash; /Service Block &ndash;&gt;-->
 
-        </div>
-    </section>
-    <!-- /Section: Clients -->
+                <!--&lt;!&ndash; Service Block &ndash;&gt;-->
+                <!--<div class="service clearfix">-->
+
+                    <!--&lt;!&ndash; Service Description &ndash;&gt;-->
+                    <!--<div class="col-sm-5 col-sm-offset-1 col-xs-12 animated fadeIn wow" data-wow-duration="0.9s">-->
+                        <!--<h3 class="title">FDM Service</h3>-->
+                        <!--<p class="description">-->
+                            <!--겹겹이 적층 방식으로 , 가격경쟁력이 우수하며 프린팅 시간이 빨라서 가장 많이 쓰여진다<br>-->
+                            <!--방앗간에는 가장 팬덤이미 많은 미국의 Makergear 사의 M2를 통해 제공됩니다-->
+                        <!--</p>-->
+                        <!--<a href="#" class="btn btn-theme" data-toggle="modal" data-target="#get-in-touch">Get In Touch</a>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash; /Service Description &ndash;&gt;-->
+
+                    <!--&lt;!&ndash; Service Image &ndash;&gt;-->
+                    <!--<div class="col-sm-5 col-xs-12 hidden-xs animated fadeInRight wow" data-wow-duration="1.5s">-->
+                        <!--<div class="image">-->
+                            <!--<img src="{% static 'images/frontend2.png' %}" alt="">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash; /Service Image &ndash;&gt;-->
+
+                <!--</div>-->
+                <!--&lt;!&ndash; /Service Block &ndash;&gt;-->
+
+                <!--&lt;!&ndash; Service Block &ndash;&gt;-->
+                <!--<div class="service clearfix">-->
+
+                    <!--&lt;!&ndash; Service Image &ndash;&gt;-->
+                    <!--<div class="col-sm-5 col-sm-offset-1 col-xs-12 hidden-xs animated fadeInLeft wow" data-wow-duration="1.5s">-->
+                        <!--<div class="image">-->
+                            <!--<img src="{% static 'images/plot2.png' %}" alt="">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash; /Service Image &ndash;&gt;-->
+
+                    <!--&lt;!&ndash; Service Description &ndash;&gt;-->
+                    <!--<div class="col-sm-5 col-xs-12 animated fadeIn wow" data-wow-duration="0.9s">-->
+                        <!--<h3 class="title">Free Printing Service!!</h3>-->
+                        <!--<p class="description">-->
+                            <!--저렴한 FDM 방식의 , 재료비는 방앗간에서 냅니다. 주머니 사정이 가벼운 분들을 위해-->
+                            <!--빠르게 모델을 제작전 검증해보고 싶은 분들에게 추천드립니다-->
+                        <!--</p>-->
+                        <!--<a href="#" class="btn btn-theme" data-toggle="modal" data-target="#get-in-touch">Get In Touch</a>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash; /Service Description &ndash;&gt;-->
+
+                <!--</div>-->
+                <!--&lt;!&ndash; /Service Block &ndash;&gt;-->
+
+            <!--</div>-->
+            <!--&lt;!&ndash; /Section Content &ndash;&gt;-->
+
+        <!--</div>-->
+    <!--</section>-->
+    <!--&lt;!&ndash; /Section: Services &ndash;&gt;-->
+
+
+
+
+
+
+    <!--&lt;!&ndash; Section: Price &ndash;&gt;-->
+    <!--<section id="price" class="section bg-theme">-->
+        <!--<div class="container">-->
+
+            <!--&lt;!&ndash; Section Header &ndash;&gt;-->
+            <!--<div class="row">-->
+                <!--<div class="col-md-6 col-md-offset-3">-->
+                    <!--<header class="text-center">-->
+                        <!--<h2 class="section-title underline text-white">Select Best Plan for You</h2>-->
+                        <!--<p class="section-subtitle text-white">-->
+                            <!--방앗간에서는 프린팅 서비스 이외의 설계 / 디자인 / 표면처리 등의 <br>엔지니어링 서비스도 계획예정에 있습니다-->
+                        <!--</p>-->
+                    <!--</header>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /Section Header &ndash;&gt;-->
+
+            <!--&lt;!&ndash; Section Content &ndash;&gt;-->
+            <!--<div class="row section-content">-->
+
+                <!--&lt;!&ndash; Plan &ndash;&gt;-->
+                <!--<div class="col-md-3 col-sm-6 animated fadeIn wow" data-wow-duration="0.9s">-->
+                    <!--<div class="plan">-->
+
+                        <!--<div class="price">-->
+                            <!--<span class="dollar">Sanding</span>-->
+                        <!--</div>-->
+
+                        <!--<h3 class="name text-center">Advanced</h3>-->
+
+                        <!--<ul class="features">-->
+                            <!--<li>There are many variations</li>-->
+                            <!--<li>Of passages</li>-->
+                            <!--<li>Of Lorem Ipsum available</li>-->
+                            <!--<li>But the majority</li>-->
+                            <!--<li>have suffered alteration</li>-->
+                        <!--</ul>-->
+
+                        <!--<a href="#" class="btn btn-theme"><i class="icon fa fa-fw fa-check"></i> <span class="text">Select Plan</span></a>-->
+
+                    <!--</div>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /Plan &ndash;&gt;-->
+
+                <!--&lt;!&ndash; Plan &ndash;&gt;-->
+                <!--<div class="col-md-3 col-sm-6 animated fadeIn wow" data-wow-duration="0.9s" data-wow-delay="0.2s">-->
+                    <!--<div class="plan">-->
+
+                        <!--<div class="price">-->
+                            <!--<span class="dollar">3D Modeling</span>-->
+                        <!--</div>-->
+
+                        <!--<h3 class="name text-center">Advanced</h3>-->
+
+                        <!--<ul class="features">-->
+                            <!--<li>There are many variations</li>-->
+                            <!--<li>Of passages</li>-->
+                            <!--<li>Of Lorem Ipsum available</li>-->
+                            <!--<li>But the majority</li>-->
+                            <!--<li>have suffered alteration</li>-->
+                        <!--</ul>-->
+
+                        <!--<a href="#" class="btn btn-theme"><i class="icon fa fa-fw fa-check"></i> <span class="text">Select Plan</span></a>-->
+
+                    <!--</div>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /Plan &ndash;&gt;-->
+
+                <!--&lt;!&ndash; Plan &ndash;&gt;-->
+                <!--<div class="col-md-3 col-sm-6 animated bounceIn wow" data-wow-duration="0.9s" data-wow-delay="0.6s">-->
+                    <!--<div class="plan">-->
+
+                        <!--<div class="price">-->
+                            <!--<span class="dollar">3D Printing</span>-->
+                        <!--</div>-->
+
+                        <!--<h3 class="name text-center">Basic</h3>-->
+
+                        <!--<ul class="features">-->
+                            <!--<li>There are many variations</li>-->
+                            <!--<li>Of passages</li>-->
+                            <!--<li>Of Lorem Ipsum available</li>-->
+                            <!--<li>But the majority</li>-->
+                            <!--<li>have suffered alteration</li>-->
+                        <!--</ul>-->
+
+                        <!--<a href="#" class="btn btn-theme"><i class="icon fa fa-fw fa-check"></i> <span class="text">Select Plan</span></a>-->
+
+                    <!--</div>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /Plan &ndash;&gt;-->
+
+                <!--&lt;!&ndash; Plan &ndash;&gt;-->
+                <!--<div class="col-md-3 col-sm-6 animated fadeIn wow" data-wow-duration="0.9s" data-wow-delay="0.4s">-->
+                    <!--<div class="plan">-->
+
+                        <!--<div class="price">-->
+                            <!--<span class="dollar">Painting</span>-->
+                        <!--</div>-->
+
+                        <!--<h3 class="name text-center">Advanced</h3>-->
+
+                        <!--<ul class="features">-->
+                            <!--<li>There are many variations</li>-->
+                            <!--<li>Of passages</li>-->
+                            <!--<li>Of Lorem Ipsum available</li>-->
+                            <!--<li>But the majority</li>-->
+                            <!--<li>have suffered alteration</li>-->
+                        <!--</ul>-->
+
+                        <!--<a href="#" class="btn btn-theme"><i class="icon fa fa-fw fa-check"></i> <span class="text">Select Plan</span></a>-->
+
+                    <!--</div>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /Plan &ndash;&gt;-->
+
+            <!--</div>-->
+            <!--&lt;!&ndash; /Section Content &ndash;&gt;-->
+
+        <!--</div>-->
+    <!--</section>-->
+
+
 
     <!-- Section: Contact Information -->
     <section id="contact-information" class="section section-small no-pb bg-dark">
@@ -791,7 +588,7 @@
                                 </div>
                                 <div class="media-body info h5">
                                     <span>Our Address</span>
-                                    988782, Our Street, L.A.
+                                    서울시 강동구 천호대로 1106 sk허브 205호
                                 </div>
                             </div>
                         </div>
@@ -803,7 +600,7 @@
                                 </div>
                                 <div class="media-body info h5">
                                     <span>E-mail</span>
-                                    clients@example.com
+                                    <a href="mailto:#" style ="color:white">3dbang@naver.com</a>
                                 </div>
                             </div>
                         </div>
@@ -815,7 +612,7 @@
                                 </div>
                                 <div class="media-body info h5">
                                     <span>Phone Number</span>
-                                    +1 (999) 888-77-66
+                                    +82 10 9098 3836
                                 </div>
                             </div>
                         </div>
@@ -827,54 +624,7 @@
 
         </div>
     </section>
-    <!-- /Section: Contact Information -->
 
-    <!-- Section: Contact -->
-    <section id="contact" class="section">
-        <div class="container">
-
-            <!-- Section Header -->
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3">
-                    <header class="text-center">
-                        <h2 class="section-title underline">Contact Us</h2>
-                        <p class="section-subtitle">
-                            There are many variations of passages of Lorem Ipsum available, but the majority have suffered
-                            alteration in some form, by injected humour.
-                        </p>
-                    </header>
-                </div>
-            </div>
-            <!-- /Section Header -->
-
-            <!-- Section Content -->
-            <div class="row section-content">
-
-                <!-- Contact Form -->
-                <div class="col-md-8 col-md-offset-2 contact-form animated fadeIn wow" data-wow-duration="0.9s">
-                    <form class="form-ajax" method="post">
-                        <input type="hidden" name="form" value="Contact">
-                        <div class="row">
-                            <div class="form-group col-md-6">
-                                <input type="text" name="name" class="form-control" placeholder="Your Name... *" required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <input type="email" name="email" class="form-control" placeholder="E-mail address... *" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-12">
-                                <textarea name="message" class="form-control" placeholder="Message... "></textarea>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-12 text-center">
-                                <button type="submit" class="btn btn-theme"><i class="icon fa fa-fw fa-paper-plane-o"></i> <span class="text">Send Message</span></button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <!-- /Contact Form -->
 
             </div>
             <!-- /Section Content -->
@@ -896,22 +646,21 @@
 
                 <!-- Footer Logo -->
                 <div class="logo">
-                    <span class="icon_cogs"></span> 3d Bang At Gan
+                    <span class="icon_cogs"></span> 3d 방앗간
                 </div>
                 <!-- /Footer Logo -->
 
                 <!-- Footer Text -->
                 <p class="text">
-                    It is a long established fact that a reader will be distracted by the readable.
+                    3d 프린팅으로 고객님의 상상을 현실로 만들어 주는 <br>기업을 지향하는 스타트업입니다.
                 </p>
                 <!-- /Footer Text -->
 
                 <!-- Footer Social -->
                 <ul class="social-inline">
-                    <li><a href="#" class="fa fa-fw fa-facebook"></a></li>
-                    <li><a href="#" class="fa fa-fw fa-twitter"></a></li>
-                    <li><a href="#" class="fa fa-fw fa-google-plus"></a></li>
-                    <li><a href="#" class="fa fa-fw fa-dribbble"></a></li>
+                    <li><a href="https://www.facebook.com/3d-%ED%94%84%EB%A6%B0%ED%8A%B8%EC%9D%98-%EB%AA%A8%EB%93%A0-%EA%B2%83-3D%EB%B0%A9%EC%95%97%EA%B0%84-2177860285561082/" class="fa fa-fw fa-facebook"></a></li>
+                    <li><a href="#" class="fa fa-fw fa-instagram"></a></li>
+
                     <li><a href="#" class="fa fa-fw fa-pinterest"></a></li>
                 </ul>
                 <!-- /Footer Social -->
@@ -921,8 +670,8 @@
 
             <!-- Footer Column -->
             <div class="col-md-3 col-sm-6 col-xs-12 footer-col">
-
-                <h4 class="title">Latest From Blog</h4>
+                <br>
+                <h4 class="title">최근 작업</h4>
 
                 <!-- Footer Post -->
                 <div class="media post">
@@ -933,7 +682,7 @@
                     </div>
                     <div class="media-body">
                         <p class="text">
-                            It is a long established fact that a reader will be distracted.
+                            이런것입니다
                         </p>
                         <a href="#">Read more</a>
                     </div>
@@ -949,7 +698,7 @@
                     </div>
                     <div class="media-body">
                         <p class="text">
-                            It is a long established fact that a reader will be distracted.
+                            멋진 핸드폰 케이스입니다
                         </p>
                         <a href="#">Read more</a>
                     </div>
@@ -961,55 +710,33 @@
 
             <!-- Footer Column -->
             <div class="col-md-2 col-sm-6 col-xs-12 footer-col">
-
+                <br>
                 <h4 class="title">Site Menu</h4>
 
                 <!-- Footer Menu -->
                 <ul class="menu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Features</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="{% url 'bootstrap' %}">홈</a></li>
+                    <li><a href="{% url 'aboutus' %}">방앗간 소개</a></li>
+                    <li><a href="{% url 'service' %}">다양한 서비스</a></li>
+                    <li><a href="{% url 'mypage' %}">나의 방앗간</a></li>
+                    <li><a href="{% url 'login' %}">로그인 하기</a></li>
                 </ul>
                 <!-- /Footer Menu -->
 
             </div>
-            <!-- /Footer Column -->
 
-            <!-- Footer Column -->
-            <div class="col-md-4 col-sm-6 col-xs-12 footer-col">
-
-                <h4 class="title">Signup to Newsletter</h4>
-
-                <!-- Footer Signup Form -->
-                <div class="signup-form">
-                    <form method="post" class="form-inline">
-                        <div class="input-group">
-                            <input type="email" class="form-control" placeholder="Your E-mail...*" required>
-                            <div class="input-group-btn">
-                                <button type="submit" class="btn btn-theme"><i class="fa fa-fw fa-envelope"></i></button>
-
-                            </div>
-
-                        </div>
-                    </form>
-                </div>
-                <!-- /Footer Signup Form -->
-
-                <!-- Footer Tags -->
+                <br>
                 <div class="tags">
-                    <a href="#" class="tag">web</a>
+                    <a href="#" class="tag">3d model</a>
                     <a href="#" class="tag">design</a>
-                    <a href="#" class="tag">clean</a>
-                    <a href="#" class="tag">minimal</a>
-                    <a href="#" class="tag">pixel perfect</a>
-                    <a href="#" class="tag">blog</a>
-                    <a href="#" class="tag">gallery</a>
-                    <a href="#" class="tag">landing</a>
-                    <a href="#" class="tag">business</a>
-                    <a href="#" class="tag">portfolio</a>
+                    <a href="#" class="tag">shape</a>
+                    <a href="#" class="tag">engineering</a>
+                    <a href="#" class="tag">3d printer</a>
+                    <a href="#" class="tag">fdm</a>
+                    <a href="#" class="tag">sla</a>
+                    <a href="#" class="tag">Makergear</a>
+                    <a href="#" class="tag">Formlabs</a>
+                    <a href="#" class="tag">xyz</a>
                 </div>
                 <!-- /Footer Tags -->
 
@@ -1025,19 +752,23 @@
             <div class="row">
 
                 <!-- Copyright -->
-                <div class="col-md-7 col-sm-12">
+                <div class="col-md-4 col-sm-12">
                     <p class="copyright">
                         Copyright &copy; 2017 <strong>3d 방앗간</strong>
                     </p>
                 </div>
+                <div class="col-md-4 col-sm-12">
+                    <p class="copyright">
+                        사업자등록번호 468-25-00548
+                </div>
                 <!-- /Copyright -->
 
                 <!-- Footer Social -->
-                <div class="col-md-5 col-sm-12">
+                <div class="col-md-4 col-sm-12">
                     <div class="links">
                         <a  href="#">Information</a>
-                        <a  href="#">Terms of service</a>
-                        <a  href="#">Private police</a>
+                        <a  href="#">서비스 정책</a>
+                        <a  href="#">개인정보제공 정책 </a>
                     </div>
                 </div>
                 <!-- /Footer Social -->
@@ -1055,86 +786,7 @@
 </div>
 <!-- /Scroll To Top -->
 
-<!-- Modal: Get In Touch -->
-<div class="modal fade" id="get-in-touch" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
 
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                    <i class="fa fa-times"></i>
-                </button>
-                <h4 class="modal-title">Model Upload</h4>
-            </div>
-
-            <div class="modal-body">
-                <div class="row">
-
-                    <!-- Contact Form -->
-                    <div class="col-md-12 contact-form">
-                        <form class="form" method="post">
-                            <input type="hidden" name="form">
-                            <!--<div class="row">-->
-                                <!--<div class="form-group col-md-6">-->
-                                    <!--<input type="text" name="name" class="form-control" placeholder="E-mail address *" required>-->
-                                <!--</div>-->
-                                <!--<div class="form-group col-md-6">-->
-                                    <!--<input type="email" name="email" class="form-control" placeholder="Password... *" required>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                            <div class="row">
-                                <div class="form-group col-md-12">
-                                    <textarea name="message" class="form-control" placeholder="Message... "></textarea>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-group col-md-12 text-center">
-                                    <button type="submit" class="btn btn-theme"><i class="icon fa fa-fw fa-paper-plane-o"></i> <span class="text">Send Model</span></button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <!-- /Contact Form -->
-
-
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-<!-- Modal: /Get In Touch -->
-
-<!-- Modal: Result Message -->
-<div class="modal fade" id="result" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                    <i class="fa fa-times"></i>
-                </button>
-                <h4 class="modal-title">Sending message</h4>
-            </div>
-
-            <div class="modal-body">
-
-                <div class="result-icon">
-                    <div class="icon-border">
-                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" preserveAspectRatio="none">
-                            <circle cx="8" cy="8" r="6.215" transform="rotate(90 8 8)"></circle>
-                        </svg>
-                        <i class="icon fa fa-check"></i>
-                    </div>
-                </div>
-
-                <p class="modal-result h4 text-center"></p>
-            </div>
-
-        </div>
-    </div>
-</div>
-<!-- /Modal: Result Message -->
 
 <!-- SCRIPTS -->
 <script src="{% static 'js/jquery-2.2.0.min.js' %}"></script>

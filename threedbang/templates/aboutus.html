@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Page title -->
+    <title>3D 방앗간</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% load staticfiles %}
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="{% static 'css/theme.css' %}">
+
+</head>
+<body>
+
+<!-- Preloader -->
+<!--<div id="preloader">-->
+    <!--<div class="loader"></div>-->
+<!--</div>-->
+<!-- /Preloader -->
+
+<!-- Header -->
+<header id="home" class="header">
+
+    <!-- Navigation -->
+    <nav id="navigation" class="navbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <!-- Navigation Header -->
+                    <div class="navbar-header">
+
+                        <!-- Toggle Button -->
+                        <button type="button"
+                                class="navbar-toggle collapsed"
+                                data-toggle="collapse"
+                                data-target="#main-menu"
+                                aria-expanded="false"
+                                aria-controls="main-menu">
+
+                            <span class="sr-only">Toggle Navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+
+                        </button>
+                        <!-- /Toggle Button -->
+
+                        <!-- Brand -->
+                        <a href="#" class="brand">
+
+                            <!-- Logo Big -->
+                            <div class="big">
+                                <span class="icon_cogs"></span> 3D 방앗간
+                            </div>
+                            <!-- /Logo Big -->
+
+                            <!-- Logo Small -->
+                            <div class="small">
+                                <span class="icon_cogs"></span>
+                            </div>
+                            <!-- /Logo Small -->
+
+                        </a>
+                        <!-- /Brand -->
+
+                    </div>
+                    <!-- /Navigation Header -->
+
+                    <!-- Navigation -->
+                    <div id="main-menu" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+
+                            <li><a class="smooth-scroll" href="{% url 'bootstrap' %}">홈</a></li>
+                            <li><a class="smooth-scroll" href="{% url 'aboutus' %}">방앗간 소개</a></li>
+                            <li><a class="smooth-scroll" href="{% url 'service' %}">제공 서비스</a></li>
+
+                            <li><a class="smooth-scroll" href="{% url 'mypage' %}">나의 방앗간</a></li>
+                            <li><a class="smooth-scroll" href="{% url 'login' %}">로그인 하기</a></li>
+
+                          <!-- /Navigation -->
+
+                        </ul>
+                    </div>
+                    <!-- /Navigation -->
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- /Navigation -->
+    <!-- Section: About -->
+    <section id="about" class="section">
+        <div class="container">
+
+            <!-- Section Header -->
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <header class="text-center">
+                        <h2 class="section-title underline">About Us</h2>
+                        <p class="section-subtitle">
+                            3D 방앗간은 저렴한 가격 , 24시간 견적 출력 서비스 , 365일 연중무휴 , 다양한 방식의 출력등을
+                            제공합니다
+                        </p>
+                    </header>
+                </div>
+            </div>
+            <!-- /Section Header -->
+
+            <!-- Section Content -->
+            <div class="row section-content">
+
+                <!-- About Block -->
+                <div class="col-md-3 col-sm-6 col animated fadeIn wow" data-wow-duration="0.9s">
+                    <span class="glyphicon glyphicon-time" style ></span>
+                    <h3 class="title">24hour Available</h3>
+                    <p class="description">
+                        방앗간은 쉴틈이 없이 돌아갑니다. 24시간 상담 및 견적 그리고 출력 가능합니다
+                    </p>
+                </div>
+                <!-- /About Block -->
+
+                <!-- About Block -->
+                <div class="col-md-3 col-sm-6 col animated fadeIn wow" data-wow-duration="0.9s" data-wow-delay="0.2s">
+                    <i class="glyphicon glyphicon-usd"></i>
+                    <h3 class="title">Cheapest Price</h3>
+                    <p class="description">
+                        업계 최저가를 보장합니다.(feat High qualities)
+                    </p>
+                </div>
+                <!-- /About Block -->
+
+                <!-- About Block -->
+                <div class="col-md-3 col-sm-6 col animated fadeIn wow" data-wow-duration="0.9s" data-wow-delay="0.4s">
+                    <span class="glyphicon glyphicon-transfer"></span>
+                    <h3 class="title">Machine Learning</h3>
+                    <p class="description">
+                        인공지능 알고리즘을 활용한 프린팅 Process 구축을 통해 가장 쉽고 빠르게 대응이 가능합니다
+                    </p>
+                </div>
+                <!-- /About Block -->
+
+                <!-- About Block -->
+                <div class="col-md-3 col-sm-6 col animated fadeIn wow" data-wow-duration="0.9s" data-wow-delay="0.6s">
+                    <span class="glyphicon glyphicon-th-list"></span>
+                    <h3 class="title">Variety</h3>
+                    <p class="description">
+                        FDM , SLA등의 프린팅 방식과 다양한 재질이<br> 가능합니다.
+                    </p>
+                </div>
+                <!-- /About Block -->
+
+
+            </div>
+            <!-- /Section Content -->
+
+        </div>
+    </section>
+</header>
+<!-- /Header -->
+
+<!-- Main -->
+<main class="main-container">
+
+
+
+    <!-- Section: Projects -->
+    <section id="projects" class="section section-small no-pb bg-light-gray">
+        <div class="container-fluid">
+
+            <!-- Section Header -->
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <header class="text-center">
+                        <h2 class="section-title underline">Latest Projects</h2>
+                        <p class="section-subtitle">
+                            3d 방앗간을 통해 제작한 Portpolio 제작
+                        </p>
+                    </header>
+                </div>
+            </div>
+            <!-- /Section Header -->
+
+            <div class="row section-content animated fadeIn wow" data-wow-duration="0.9s">
+
+                <!-- Project Image -->
+                <div class="col-md-3 col-sm-6 col-xs-12 project-col">
+                    <a href="{% static 'images/project01.jpg' %}" class="project-item image-popup">
+                        <div class="gallery-image">
+                            <img src="{% static 'images/project01.jpg' %}" alt="">
+                        </div>
+                    </a>
+                </div>
+                <!-- /Project Image -->
+
+                <!-- Project Image -->
+                <div class="col-md-3 col-sm-6 col-xs-12 project-col">
+                    <a href="{% static 'images/project02.jpg' %}" class="project-item image-popup">
+                        <div class="gallery-image">
+                            <img src="{% static 'images/project02.jpg' %}" alt="">
+                        </div>
+                    </a>
+                </div>
+                <!-- /Project Image -->
+
+                <!-- Project Image -->
+                <div class="col-md-3 col-sm-6 col-xs-12 project-col">
+                    <a href="{% static 'images/project03.jpg' %}" class="project-item image-popup">
+                        <div class="gallery-image">
+                            <img src="{% static 'images/project03.jpg' %}" alt="">
+                        </div>
+                    </a>
+                </div>
+                <!-- /Project Image -->
+
+                <!-- Project Image -->
+                <div class="col-md-3 col-sm-6 col-xs-12 project-col">
+                    <a href="{% static 'images/project04.jpg' %}" class="project-item image-popup">
+                        <div class="gallery-image">
+                            <img src="{% static 'images/project04.jpg' %}" alt="">
+                        </div>
+                    </a>
+                </div>
+                <!-- /Project Image -->
+
+                <!-- Project Image -->
+                <div class="col-md-3 col-sm-6 col-xs-12 project-col">
+                    <a href="{% static 'images/project05.jpg' %}" class="project-item image-popup">
+                        <div class="gallery-image">
+                            <img src="{% static 'images/project05.jpg' %}" alt="">
+                        </div>
+                    </a>
+                </div>
+                <!-- /Project Image -->
+
+                <!-- Project Image -->
+                <div class="col-md-3 col-sm-6 col-xs-12 project-col">
+                    <a href="{% static 'images/project06.jpg' %}" class="project-item image-popup">
+                        <div class="gallery-image">
+                            <img src="{% static 'images/project06.jpg' %}" alt="">
+                        </div>
+                    </a>
+                </div>
+                <!-- /Project Image -->
+
+                <!-- Project Image -->
+                <div class="col-md-3 col-sm-6 col-xs-12 project-col">
+                    <a href="{% static 'images/project07.jpg' %}" class="project-item image-popup">
+                        <div class="gallery-image">
+                            <img src="{% static 'images/project07.jpg' %}" alt="">
+                        </div>
+                    </a>
+                </div>
+                <!-- /Project Image -->
+
+                <!-- Project Image -->
+                <div class="col-md-3 col-sm-6 col-xs-12 project-col">
+                    <a href="{% static 'images/project08.jpg' %}" class="project-item image-popup">
+                        <div class="gallery-image">
+                            <img src="{% static 'images/project08.jpg' %}" alt="">
+                        </div>
+                    </a>
+                </div>
+                <!-- /Project Image -->
+
+            </div>
+
+        </div>
+    </section>
+    <!-- /Section: Projects -->
+
+
+
+    <!-- /Trigger: Join -->
+
+    <!-- Section: Contact Information -->
+    <section id="contact-information" class="section section-small no-pb bg-dark">
+        <div class="container">
+
+            <!-- Section Header -->
+            <div class="row" style="display: none;">
+                <div class="col-md-6 col-md-offset-3">
+                    <header class="text-center">
+                        <h2 class="section-title underline">Contact Information</h2>
+                        <p class="section-subtitle">
+                            There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                            alteration in some form, by injected humour.
+                        </p>
+                    </header>
+                </div>
+            </div>
+            <!-- /Section Header -->
+
+
+            <!-- Section Content -->
+            <div class="row animated fadeIn wow" data-wow-duration="0.9s">
+                <div class="col-md-8 col-md-offset-2 col-sm-12">
+                    <div class="row">
+
+                        <div class="col-sm-4 col-xs-12">
+                            <div class="media contact">
+                                <div class="media-left">
+                                    <span class="icon icon_map_alt"></span>
+                                </div>
+                                <div class="media-body info h5">
+                                    <span>Our Address</span>
+                                    서울시 강동구 천호대로 1106 sk허브 205호
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-xs-12">
+                            <div class="media contact">
+                                <div class="media-left">
+                                    <span class="icon icon_mail_alt"></span>
+                                </div>
+                                <div class="media-body info h5">
+                                    <span>E-mail</span>
+                                    <a href="mailto:#" style ="color:white">3dbang@naver.com</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-xs-12">
+                            <div class="media contact">
+                                <div class="media-left">
+                                    <i class="icon icon_mobile"></i>
+                                </div>
+                                <div class="media-body info h5">
+                                    <span>Phone Number</span>
+                                    +82 10 9098 3836
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- /Section Content -->
+
+        </div>
+    </section>
+
+
+            </div>
+            <!-- /Section Content -->
+
+        </div>
+    </section>
+    <!-- /Section: Contact -->
+
+</main>
+<!-- /Main -->
+
+<!-- Footer -->
+<footer class="footer section section-small no-pb bg-light-gray">
+    <div class="container">
+        <div class="row">
+
+            <!-- Footer Column -->
+            <div class="col-md-3 col-sm-6 col-xs-12 footer-col">
+
+                <!-- Footer Logo -->
+                <div class="logo">
+                    <span class="icon_cogs"></span> 3d 방앗간
+                </div>
+                <!-- /Footer Logo -->
+
+                <!-- Footer Text -->
+                <p class="text">
+                    3d 프린팅으로 고객님의 상상을 현실로 만들어 주는 <br>기업을 지향하는 스타트업입니다.
+                </p>
+                <!-- /Footer Text -->
+
+                <!-- Footer Social -->
+                <ul class="social-inline">
+                    <li><a href="https://www.facebook.com/3d-%ED%94%84%EB%A6%B0%ED%8A%B8%EC%9D%98-%EB%AA%A8%EB%93%A0-%EA%B2%83-3D%EB%B0%A9%EC%95%97%EA%B0%84-2177860285561082/" class="fa fa-fw fa-facebook"></a></li>
+                    <li><a href="#" class="fa fa-fw fa-instagram"></a></li>
+
+                    <li><a href="#" class="fa fa-fw fa-pinterest"></a></li>
+                </ul>
+                <!-- /Footer Social -->
+
+            </div>
+            <!-- /Footer Column -->
+
+            <!-- Footer Column -->
+            <div class="col-md-3 col-sm-6 col-xs-12 footer-col">
+                <br>
+                <h4 class="title">최근 작업</h4>
+
+                <!-- Footer Post -->
+                <div class="media post">
+                    <div class="media-left">
+                        <div class="image">
+                            <img src="{% static 'images/last-post-01.jpg' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <p class="text">
+                            이런것입니다
+                        </p>
+                        <a href="#">Read more</a>
+                    </div>
+                </div>
+                <!-- /Footer Post -->
+
+                <!-- Footer Post -->
+                <div class="media post">
+                    <div class="media-left">
+                        <div class="image">
+                            <img src="{% static 'images/last-post-02.jpg' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <p class="text">
+                            멋진 핸드폰 케이스입니다
+                        </p>
+                        <a href="#">Read more</a>
+                    </div>
+                </div>
+                <!-- /Footer Post -->
+
+            </div>
+            <!-- /Footer Column -->
+
+            <!-- Footer Column -->
+            <div class="col-md-2 col-sm-6 col-xs-12 footer-col">
+                <br>
+                <h4 class="title">Site Menu</h4>
+
+                <!-- Footer Menu -->
+                <ul class="menu">
+                    <li><a href="{% url 'bootstrap' %}">홈</a></li>
+                    <li><a href="{% url 'aboutus' %}">방앗간 소개</a></li>
+                    <li><a href="{% url 'service' %}">다양한 서비스</a></li>
+                    <li><a href="{% url 'mypage' %}">나의 방앗간</a></li>
+                    <li><a href="{% url 'login' %}">로그인 하기</a></li>
+                </ul>
+                <!-- /Footer Menu -->
+
+            </div>
+
+                <br>
+                <div class="tags">
+                    <a href="#" class="tag">3d model</a>
+                    <a href="#" class="tag">design</a>
+                    <a href="#" class="tag">shape</a>
+                    <a href="#" class="tag">engineering</a>
+                    <a href="#" class="tag">3d printer</a>
+                    <a href="#" class="tag">fdm</a>
+                    <a href="#" class="tag">sla</a>
+                    <a href="#" class="tag">Makergear</a>
+                    <a href="#" class="tag">Formlabs</a>
+                    <a href="#" class="tag">xyz</a>
+                </div>
+                <!-- /Footer Tags -->
+
+            </div>
+            <!-- /Footer Column -->
+
+        </div>
+
+    </div>
+
+    <div class="bottom-line bg-dark">
+        <div class="container">
+            <div class="row">
+
+                <!-- Copyright -->
+                <div class="col-md-4 col-sm-12">
+                    <p class="copyright">
+                        Copyright &copy; 2017 <strong>3d 방앗간</strong>
+                    </p>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <p class="copyright">
+                        사업자등록번호 468-25-00548
+                </div>
+                <!-- /Copyright -->
+
+                <!-- Footer Social -->
+                <div class="col-md-4 col-sm-12">
+                    <div class="links">
+                        <a  href="#">Information</a>
+                        <a  href="#">서비스 정책</a>
+                        <a  href="#">개인정보제공 정책 </a>
+                    </div>
+                </div>
+                <!-- /Footer Social -->
+
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- /Footer -->
+
+
+<!-- Scroll To Top -->
+<div id="scroll-to-top" class="scroll-to-top">
+    <i class="icon fa fa-angle-up"></i>
+</div>
+<!-- /Scroll To Top -->
+<!-- SCRIPTS -->
+<script src="{% static 'js/jquery-2.2.0.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'js/jquery.validate.min.js' %}"></script>
+<script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+<script src="{% static 'js/wow.min.js' %}"></script>
+<script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+<script src="{% static 'js/jquery.appear.js' %}"></script>
+<script src="{% static 'js/general.js' %}"></script>
+<!-- /SCRIPTS -->
+
+</body>
+</html>

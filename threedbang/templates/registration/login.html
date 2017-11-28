@@ -77,16 +77,19 @@
                     <!-- /Navigation Header -->
 
                     <!-- Navigation -->
+
                     <div id="main-menu" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
 
-                          <li><a class="smooth-scroll" href="{% url 'bootstrap' %}">홈</a></li>
-                          <!-- <li><a class="smooth-scroll" href="#about">방앗간 매력</a></li>
-                          <li><a class="smooth-scroll" href="#projects">방앗간 전시관</a></li>
-                          <li><a class="smooth-scroll" href="#services">다양한 서비스</a></li> -->
+                            <li><a class="smooth-scroll" href="{% url 'bootstrap' %}">홈</a></li>
+                            <li><a class="smooth-scroll" href="{% url 'aboutus' %}">방앗간 소개</a></li>
+                            <li><a class="smooth-scroll" href="{% url 'service' %}">제공 서비스</a></li>
 
-                          <li><a class="smooth-scroll" href="{% url 'mypage' %}">나의 방앗간</a></li>
-                          <li><a class="smooth-scroll" href="{% url 'login' %}">로그인 하기</a></li>
+                            <li><a class="smooth-scroll" href="{% url 'mypage' %}">나의 방앗간</a></li>
+                          <li><a class="smooth-scroll" href="{% url 'logout' %}">로그아웃 하기</a></li>
+
+                          <!-- /Navigation -->
+
                         </ul>
                     </div>
                     <!-- /Navigation -->
@@ -105,8 +108,8 @@
                 <div class="container" >
                     <div class="col-md-6 col-md-offset-2 relative">
                         {% if user.is_active %}
-                        <h1 class = 'aniamted fadeInDown wow' data-wow-delay = "0.2s"> 반갑습니다, {{user.username}}님 방앗간에 오셔서 감사하구만유!</h1>
-                        <a href="{% url 'logout' %}">로그아웃</a>
+                        <h1 class = 'aniamted fadeInDown wow' data-wow-delay = "0.2s" style="font-size: 25px;color: #c9c9c9; "> 반갑습니다,<br><br> <strong style = "color : white;">{{user.username}}</strong>님 <br><br>방앗간에 오신 것을 환영합니다</h1>
+                        <a href="{% url 'logout' %}" style="font-size: 15px;color: #c0d6e4; ">로그아웃</a>
                         <div class="subtitle animated fadeInUp wow" data-wow-duration="0.9s" data-wow-delay="0.5s">
                           {% else %}
                           {% if form.errors %}
@@ -114,15 +117,33 @@
                           {% endif %}
                           <div class="animated fadeInUp wow" data-wow-delay="0.2s">
                               <form method="post" action="{% url 'login' %}">
-                              <h1 class = 'aniamted fadeInDown wow' data-wow-delay = "0.2s"> 방앗간 가입하기 </h1>
+                              <h1 class = 'aniamted fadeInDown wow' data-wow-delay = "0.2s"> 방앗간 로그인 </h1>
                               {% csrf_token %}
-                              <input type="hidden" name="next" value="{{next}}" />
-                              {{ form.as_p }}
-                              <button type="submit">로그인</button>
-                              </form>
+                              {% for error in form.non_field_errors %}
+                                    <div class="form-group has-errors text-danger small">
+                                        {{error}}
+                                    </div>
+                                    {% endfor %}
+                                    {% for field in form %}
+                                    <div class="form-group has-errors text-danger small">
+                                        {{field.errors}}
+                                    </div>
+                                    <div class="form-group has-errors text-danger small">
+                                    </div>
+                                    <div class="form-group">
+                                        {{field}}
+                                    </div>
+                                    {% endfor %}
+                                    <button class="btn" style="width:33.5%">Login</button>
+                                    <br><br>
+                                     <label>
+                                         <input type="checkbox">Remember me
+                                     </label>
+                                  </form>
 
                               <br>
                               <p>아이디가 없으신가요? <a href="{% url 'signup'%}">회원가입</a></p>
+
 
                           {% endif %}
                         </div>
