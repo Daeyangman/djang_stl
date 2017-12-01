@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Page title -->
+    <title>3D 방앗간</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% load staticfiles %}
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="{% static 'css/theme.css' %}">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
+    <script type="text/javascript" src="https://service.iamport.kr/js/iamport.payment-1.1.5.js"></script>
+
+</head>
+<body>
+
+<!-- Preloader -->
+<!--<div id="preloader">-->
+    <!--<div class="loader"></div>-->
+<!--</div>-->
+<!-- /Preloader -->
+
+<!-- Header -->
+<header id="home" class="header">
+
+    <!-- Navigation -->
+    <nav id="navigation" class="navbar affix">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <!-- Navigation Header -->
+                    <div class="navbar-header">
+
+                        <!-- Toggle Button -->
+                        <button type="button"
+                                class="navbar-toggle collapsed"
+                                data-toggle="collapse"
+                                data-target="#main-menu"
+                                aria-expanded="false"
+                                aria-controls="main-menu">
+
+                            <span class="sr-only">Toggle Navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+
+                        </button>
+                        <!-- /Toggle Button -->
+
+                        <!-- Brand -->
+                        <a href="#" class="brand">
+
+                            <!-- Logo Big -->
+                            <div class="big">
+                                <span class="icon_cogs"></span> 3D 방앗간
+                            </div>
+                            <!-- /Logo Big -->
+
+                            <!-- Logo Small -->
+                            <div class="small">
+                                <span class="icon_cogs"></span>
+                            </div>
+                            <!-- /Logo Small -->
+
+                        </a>
+                        <!-- /Brand -->
+
+                    </div>
+                    <!-- /Navigation Header -->
+
+                    <!-- Navigation -->
+                    <div id="main-menu">
+                        <ul class="nav navbar-nav navbar-right">
+
+                          <li><a class="smooth-scroll" href="{% url 'bootstrap' %}">홈</a></li>
+                          <li><a class="smooth-scroll" href="{% url 'aboutus' %}">방앗간 제품</a></li>
+                            <li><a class="smooth-scroll" href="{% url 'service' %}">다양한 서비스</a></li>
+                          <li><a class="smooth-scroll" href="{% url 'mypage' %}">나의 방앗간</a></li>
+                          <li><a class="smooth-scroll" href="{% url 'login' %}">로그인 하기</a></li>
+                        </ul>
+                    </div>
+                    <!-- /Navigation -->
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- /Navigation -->
+
+    <!-- Slider -->
+    <div id="carousel-home" class="slider owl-carousel owl-theme">
+        <!-- Slide -->
+        <div class="item mask mask-black" style="background: url(/static/images/home3.jpeg) ; no-repeat center top / cover;" data-stellar-background-ratio="0.4">
+            <div class="full-wh relative" data-stellar-ratio="0.5">
+                <div class="container" >
+                   <div class="col-md-12 col-md-offset-2 relative">
+                            <div class="col-md-12 col-sm-12 animated fadeIn wow" data-wow-duration="0.9s" data-wow-delay="0.2s">
+                           <form method = "POST" action = "{% url 'address' %}" enctype="multipart/form-data" style="margin:0px 0px 0px 0px ; pading:0px 0px 0px 0px; ">
+                            {% csrf_token %}
+                            {% for field in form %}
+                                <div class="form-group">
+                                    <label style="font-size: 15px;color: white; " >{{ field.label_tag }}</label>
+
+                                    <div class="input" style = "color :#817f7f" >{{ field }}</div>
+                                </div>
+
+                            {% endfor %}
+
+                                  <br>
+                               <button id="paid" class="btn" style="width:33.5%">결제하기</button>
+                                    <br><br>
+
+                                  </form>
+                                  <br><br>
+                                    <input type="text" id="sample6_postcode" placeholder="우편번호">
+                                    <input type="button" onclick="sample6_execDaumPostcode()" style = "color :#817f7f" value="우편번호 찾기"><br>
+                                    <input type="text" id="sample6_address" placeholder="주소">
+                                    <input type="text" id="sample6_address2" placeholder="상세주소">
+
+                                    <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+                                    <script>
+                                        function sample6_execDaumPostcode() {
+                                            new daum.Postcode({
+                                                oncomplete: function(data) {
+                                                    // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+                                                    // 각 주소의 노출 규칙에 따라 주소를 조합한다.
+                                                    // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+                                                    var fullAddr = ''; // 최종 주소 변수
+                                                    var extraAddr = ''; // 조합형 주소 변수
+
+                                                    // 사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+                                                    if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+                                                        fullAddr = data.roadAddress;
+
+                                                    } else { // 사용자가 지번 주소를 선택했을 경우(J)
+                                                        fullAddr = data.jibunAddress;
+                                                    }
+
+                                                    // 사용자가 선택한 주소가 도로명 타입일때 조합한다.
+                                                    if(data.userSelectedType === 'R'){
+                                                        //법정동명이 있을 경우 추가한다.
+                                                        if(data.bname !== ''){
+                                                            extraAddr += data.bname;
+                                                        }
+                                                        // 건물명이 있을 경우 추가한다.
+                                                        if(data.buildingName !== ''){
+                                                            extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+                                                        }
+                                                        // 조합형주소의 유무에 따라 양쪽에 괄호를 추가하여 최종 주소를 만든다.
+                                                        fullAddr += (extraAddr !== '' ? ' ('+ extraAddr +')' : '');
+                                                    }
+
+                                                    // 우편번호와 주소 정보를 해당 필드에 넣는다.
+                                                    document.getElementById('sample6_postcode').value = data.zonecode; //5자리 새우편번호 사용
+                                                    document.getElementById('sample6_address').value = fullAddr;
+
+                                                    // 커서를 상세주소 필드로 이동한다.
+                                                    document.getElementById('sample6_address2').focus();
+                                                }
+                                            }).open();
+                                        }
+                                    </script>
+
+                                    <script type="text/javascript">
+
+                                        $(function() {
+                                                $("#paid1").click(function() {
+                                                    var IMP = window.IMP; // 생략가능
+                                                    IMP.init('imp05811817');
+                                                    IMP.request_pay({
+                                                        pg : 'inicis', // version 1.1.0부터 지원.
+                                                        pay_method : 'card',
+                                                        name : '주문명:결제테스트',
+                                                        amount : '10000',
+                                                        buyer_email : 'iamport@siot.do',
+                                                        buyer_name : '구매자이름',
+                                                        buyer_tel : '010-1234-5678',
+                                                        buyer_addr : '서울특별시 강남구 삼성동',
+                                                        buyer_postcode : '123-456',
+                                                        m_redirect_url : 'https://www.yourdomain.com/payments/complete'
+                                                    }, function(rsp) {
+                                                        if ( rsp.success ) {
+                                                            var msg = '결제가 완료되었습니다.';
+                                                            msg += '결제 금액 : ' + rsp.paid_amount;
+                                                            msg += '카드 승인번호 : ' + rsp.apply_num;
+                                                        } else {
+                                                            var msg = '결제에 실패하였습니다.';
+                                                            msg += '에러내용 : ' + rsp.error_msg;
+                                                        }
+                                                        alert(msg);
+                                                    });
+                                                            });
+
+                                        });
+                                     </script>
+                                     </div>
+                                </div>
+                            </div>
+                     </div>
+
+                   </div>
+                </div>
+            </div>
+         </div>
+    </div>
+    <!-- /Slider -->
+
+</header>
+<!-- /Header -->
+
+<!-- /Modal: Result Message -->
+
+<!-- SCRIPTS -->
+<script src="{% static 'js/jquery-2.2.0.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'js/jquery.validate.min.js' %}"></script>
+<script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+<script src="{% static 'js/wow.min.js' %}"></script>
+<script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+<script src="{% static 'js/jquery.appear.js' %}"></script>
+<script src="{% static 'js/general.js' %}"></script>
+
+
+<!-- /SCRIPTS -->
+</body>
+
+</html>

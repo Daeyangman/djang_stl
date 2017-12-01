@@ -83,7 +83,7 @@
                         <ul class="nav navbar-nav navbar-right">
 
                           <li><a class="smooth-scroll" href="{% url 'bootstrap' %}">홈</a></li>
-                          <li><a class="smooth-scroll" href="{% url 'aboutus' %}">방앗간 매력</a></li>
+                          <li><a class="smooth-scroll" href="{% url 'aboutus' %}">방앗간 소개</a></li>
                             <li><a class="smooth-scroll" href="{% url 'service' %}">다양한 서비스</a></li>
                           <li><a class="smooth-scroll" href="{% url 'mypage' %}">나의 방앗간</a></li>
                           <li><a class="smooth-scroll" href="{% url 'login' %}">로그인 하기</a></li>
@@ -116,48 +116,20 @@
                             <div class="col-md-3 col-sm-12 animated fadeIn wow" data-wow-duration="0.9s" data-wow-delay="0.2s">
                                 <div class="plan">
 
-                                    <h3 class="name text-center"></h3>
+                                    <h3 class="name text-center">{{stlfile.file.name}}</h3>
 
                                     <ul class="features">
-                                        <li>{{stlfile.volume}}</li>
-                                        <li>{{stlfile.file.name}}</li>
-                                        <li>{{stlfile.pub_date}}</li>
+                                        <li>Volume : {{stlfile.volume}}</li>
+                                        <li>업로드 일자 : {{stlfile.pub_date}}</li>
+                                        <br>
+                                        <li>예상 일자 : {{stlfile.time}}</li>
+                                        <li>예상 가격 : {{stlfile.price}}</li>
+
 
                                     </ul>
 
-                                    <button id = 'paid' class="btn btn-theme"><i class="icon fa fa-fw fa-check"></i> <span class="text">결제하기</span></button>
-                                     <script type="text/javascript">
+                                    <a href = "{% url 'address' %}"><button id = 'paid' class="btn btn-theme"><i class="icon fa fa-fw fa-check"></i> <span class="text">결제하기</span></button></a>
 
-                                        $(function() {
-                                                $("#paid").click(function() {
-                                                    var IMP = window.IMP; // 생략가능
-                                                    IMP.init('imp05811817');
-                                                    IMP.request_pay({
-                                                        pg : 'inicis', // version 1.1.0부터 지원.
-                                                        pay_method : 'card',
-                                                        name : '주문명:결제테스트',
-                                                        amount : {{stlfile.volume}},
-                                                        buyer_email : 'iamport@siot.do',
-                                                        buyer_name : '구매자이름',
-                                                        buyer_tel : '010-1234-5678',
-                                                        buyer_addr : '서울특별시 강남구 삼성동',
-                                                        buyer_postcode : '123-456',
-                                                        m_redirect_url : 'https://www.yourdomain.com/payments/complete'
-                                                    }, function(rsp) {
-                                                        if ( rsp.success ) {
-                                                            var msg = '결제가 완료되었습니다.';
-                                                            msg += '결제 금액 : ' + rsp.paid_amount;
-                                                            msg += '카드 승인번호 : ' + rsp.apply_num;
-                                                        } else {
-                                                            var msg = '결제에 실패하였습니다.';
-                                                            msg += '에러내용 : ' + rsp.error_msg;
-                                                        }
-                                                        alert(msg);
-                                                    });
-                                                            });
-
-                                        });
-                                     </script>
                                 </div>
                             </div>
                         {% endfor %}

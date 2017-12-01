@@ -4,7 +4,8 @@ from django.conf import settings
 import numpy as np
 from stl import mesh
 from django.db import models
-
+import datetime
+from django.utils import timezone
 # Create your models here.
 def user_path(instance , filename):
     # from random import choice
@@ -17,11 +18,15 @@ def user_path(instance , filename):
 
 
 class StlFile(models.Model):
-    comment = models.CharField(max_length= 255, default = u"요청사항을 기재해주세요")
+    comment = models.CharField(max_length= 255, default = "요청사항을 기재해주세요")
     file = models.FileField(upload_to = user_path)
     owner = models.ForeignKey(settings.AUTH_USER_MODEL)
     pub_date = models.DateTimeField(auto_now_add=True)
     volume = models.IntegerField(default = 0)
+    price = models.CharField(max_length = 255 , default = "곧 가격이 업데이트 됩니다!")
+    time = models.CharField(max_length = 255 ,default = "곧 가격이 업데이트 됩니다!")
+    address = models.CharField(max_length=255, default="여기에 주소를 입력해주세요, 구/신주소 무관")
+    phone_number = models.CharField(max_length = 255,default="-는 생략해주셔도 됩니다.")
     thumnail_image = models.ImageField(blank = True)
     def meshMake(self):
         self.save()
@@ -29,5 +34,14 @@ class StlFile(models.Model):
         self.volume ,b,c = self.mesh.get_mass_properties()
         return self.volume
     def __str__(self):
-        return "%s %s %s " % (self.owner , self.file ,self.pub_date )
+        return "%s %s %s %s %s" % (self.owner , self.file ,self.pub_date , self.address , self.phone_number )
 
+# class CustomAddress(models.Model):
+#     owner = models.ForeignKey(settings.AUTH_USER_MODEL)
+#     address = models.CharField(max_length = 255 , default = u"여기에 주소를 입력해주세요, 구/신주소 무관")
+#     phone_number = models.IntegerField(default = u"-는 생략해주세요")
+#     def generate(self):
+#         self.save()
+#         return self.owner
+#     def __str__(self):
+#         return "%s %s %s " % (self.owner , self.address ,self.phone_number )

@@ -4,3 +4,4 @@ from .models import StlFile
 
 admin.site.register(StlFile)
 
+# admin.site.register(CustomAddress)

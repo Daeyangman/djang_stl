@@ -2,7 +2,7 @@ from django.shortcuts import render,redirect
 from django.views.generic.list import ListView
 from django.views.generic.base import TemplateView
 from django.views.generic.edit import CreateView
-from .forms import CreateUserForm , UploadForm
+from .forms import CreateUserForm , UploadForm,UploadForm2
 from django.core.urlresolvers import reverse_lazy
 from django.contrib.auth.decorators import login_required
 from .models import StlFile
@@ -17,10 +17,15 @@ class BootTemplateView(TemplateView):
     template_name = 'index-smooth-scroll.html'
 class AboutUsTemplateView(TemplateView):
     template_name = 'aboutus.html'
+class RegualtionTemplateView1(TemplateView):
+    template_name = 'regulation_1.html'
 
-class TestTemplateView(TemplateView):
-    template_name = 'test2.html'
+class RegualtionTemplateView2(TemplateView):
+    template_name = 'regulation_2.html'
 
+
+class RegualtionTemplateView3(TemplateView):
+    template_name = 'regulation_3.html'
 
 class ServiceTemplateView(TemplateView):
     template_name = 'service.html'
@@ -59,3 +64,17 @@ class MypageListView(ListView):
         user = self.request.user
         return user.stlfile_set.all().order_by('-pub_date')
 
+
+#
+# @login_required()
+# def uploadaddress(request):
+#     if request.method == 'POST':
+#         form = UploadForm2(request.POST)
+#         # from IPython import embed; embed()
+#         if form.is_valid():
+#             custom_address = form.save(commit=False)
+#             custom_address.owner = request.user
+#             custom_address.save()
+#         return redirect('mypagelist')
+#     form = UploadForm2()
+#     return render(request, 'customaddress.html', {'form': form})

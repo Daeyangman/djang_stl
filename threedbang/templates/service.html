@@ -102,7 +102,7 @@
     <!-- Slider -->
     <div id="carousel-home" class="slider owl-carousel owl-theme">
         <!-- Slide -->
-        <div class="item mask mask-black" style="background: url(/static/images/home4.jpeg) ; no-repeat center top / cover;" data-stellar-background-ratio="0.4">
+        <div class="item mask mask-black" style="background: url(/static/images/service.jpeg) ; no-repeat center top / cover;" data-stellar-background-ratio="0.4">
             <div class="full-wh relative" data-stellar-ratio="0.5">
                 <div class="container" >
                     <div class="col-md-6 col-md-offset-2 relative">
@@ -168,7 +168,7 @@
                     <!-- Service Image -->
                     <div class="col-sm-5 col-sm-offset-1 col-xs-12 hidden-xs animated fadeInLeft wow" data-wow-duration="1.5s">
                         <div class="image">
-                            <img src="{% static 'images/devices2.png' %}" alt="">
+                            <img src="{% static 'images/devices.png' %}" alt="">
                         </div>
                     </div>
                     <!-- /Service Image -->
@@ -206,7 +206,7 @@
                     <!-- Service Image -->
                     <div class="col-sm-5 col-xs-12 hidden-xs animated fadeInRight wow" data-wow-duration="1.5s">
                         <div class="image">
-                            <img src="{% static 'images/frontend2.png' %}" alt="">
+                            <img src="{% static 'images/frontend.png' %}" alt="">
                         </div>
                     </div>
                     <!-- /Service Image -->
@@ -220,7 +220,7 @@
                     <!-- Service Image -->
                     <div class="col-sm-5 col-sm-offset-1 col-xs-12 hidden-xs animated fadeInLeft wow" data-wow-duration="1.5s">
                         <div class="image">
-                            <img src="{% static 'images/plot2.png' %}" alt="">
+                            <img src="{% static 'images/plot.png' %}" alt="">
                         </div>
                     </div>
                     <!-- /Service Image -->
@@ -534,7 +534,7 @@
                 <!-- Footer Menu -->
                 <ul class="menu">
                     <li><a href="{% url 'bootstrap' %}">홈</a></li>
-                    <li><a href="{% url 'aboutus' %}">방앗간 소개</a></li>
+                    <li><a href="{% url 'aboutus' %}">방앗간 제품</a></li>
                     <li><a href="{% url 'service' %}">다양한 서비스</a></li>
                     <li><a href="{% url 'mypage' %}">나의 방앗간</a></li>
                     <li><a href="{% url 'login' %}">로그인 하기</a></li>
@@ -584,9 +584,9 @@
                 <!-- Footer Social -->
                 <div class="col-md-4 col-sm-12">
                     <div class="links">
-                        <a  href="#">Information</a>
-                        <a  href="#">서비스 정책</a>
-                        <a  href="#">개인정보제공 정책 </a>
+                        <a  href="{% url 'information' %}">Information</a>
+                        <a  href="{% url 'regulation' %}">이용약관</a>
+                        <a  href="{% url 'privacy' %}">개인정보제공 정책 </a>
                     </div>
                 </div>
                 <!-- /Footer Social -->

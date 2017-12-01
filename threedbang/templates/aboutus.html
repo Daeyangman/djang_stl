@@ -17,15 +17,10 @@
 
     <!-- Style -->
     <link rel="stylesheet" href="{% static 'css/theme.css' %}">
-
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
+    <script type="text/javascript" src="https://service.iamport.kr/js/iamport.payment-1.1.5.js"></script>
 </head>
 <body>
-
-<!-- Preloader -->
-<!--<div id="preloader">-->
-    <!--<div class="loader"></div>-->
-<!--</div>-->
-<!-- /Preloader -->
 
 <!-- Header -->
 <header id="home" class="header">
@@ -81,7 +76,7 @@
                         <ul class="nav navbar-nav navbar-right">
 
                             <li><a class="smooth-scroll" href="{% url 'bootstrap' %}">홈</a></li>
-                            <li><a class="smooth-scroll" href="{% url 'aboutus' %}">방앗간 소개</a></li>
+                            <li><a class="smooth-scroll" href="{% url 'aboutus' %}">방앗간 제품</a></li>
                             <li><a class="smooth-scroll" href="{% url 'service' %}">제공 서비스</a></li>
 
                             <li><a class="smooth-scroll" href="{% url 'mypage' %}">나의 방앗간</a></li>
@@ -181,9 +176,10 @@
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
                     <header class="text-center">
-                        <h2 class="section-title underline">Latest Projects</h2>
+                        <h2 class="section-title underline">방앗간 제품</h2>
                         <p class="section-subtitle">
-                            3d 방앗간을 통해 제작한 Portpolio 제작
+                            3d 방앗간에서 제작한 모델입니다. 출력 완성품으로 저렴하게 만나실 수 있으십니다.
+                            <br>장식용으로 좋습니다.
                         </p>
                     </header>
                 </div>
@@ -199,7 +195,41 @@
                             <img src="{% static 'images/project01.jpg' %}" alt="">
                         </div>
                     </a>
+                    <button id="paid1" class="btn col-md-12" style = "margin:0px 0px 0px 0px;font-size:12px;">30x30x30(mm) FDM 방식 :50,000원</button>
+                    <script type="text/javascript">
+
+                                        $(function() {
+                                                $("#paid1").click(function() {
+                                                    var IMP = window.IMP; // 생략가능
+                                                    IMP.init('imp05811817');
+                                                    IMP.request_pay({
+                                                        pg : 'inicis', // version 1.1.0부터 지원.
+                                                        pay_method : 'card',
+                                                        name : '주문명: 방앗간 완성제품 구매',
+                                                        amount : '50000',
+                                                        buyer_email : 'iamport@siot.do',
+                                                        buyer_name : '이상호',
+                                                        buyer_tel : '010-9098-3836',
+                                                        buyer_addr : '서울특별시 강남구 삼성동',
+                                                        buyer_postcode : '123-456',
+                                                        m_redirect_url : 'https://www.yourdomain.com/payments/complete'
+                                                    }, function(rsp) {
+                                                        if ( rsp.success ) {
+                                                            var msg = '결제가 완료되었습니다.';
+                                                            msg += '결제 금액 : ' + rsp.paid_amount;
+                                                            msg += '카드 승인번호 : ' + rsp.apply_num;
+                                                        } else {
+                                                            var msg = '결제에 실패하였습니다.';
+                                                            msg += '에러내용 : ' + rsp.error_msg;
+                                                        }
+                                                        alert(msg);
+                                                    });
+                                                            });
+
+                                        });
+                                     </script>
                 </div>
+
                 <!-- /Project Image -->
 
                 <!-- Project Image -->
@@ -209,6 +239,39 @@
                             <img src="{% static 'images/project02.jpg' %}" alt="">
                         </div>
                     </a>
+                    <button id="paid2" class="btn col-md-12" style = "margin:0px 0px 0px 0px;font-size:12px;">40x40x40(mm) FDM 방식 :70,000원</button>
+                    <script type="text/javascript">
+
+                                        $(function() {
+                                                $("#paid2").click(function() {
+                                                    var IMP = window.IMP; // 생략가능
+                                                    IMP.init('imp05811817');
+                                                    IMP.request_pay({
+                                                        pg : 'inicis', // version 1.1.0부터 지원.
+                                                        pay_method : 'card',
+                                                        name : '주문명: 방앗간 완성제품 구매',
+                                                        amount : '70000',
+                                                        buyer_email : 'iamport@siot.do',
+                                                        buyer_name : '이상호',
+                                                        buyer_tel : '010-9098-3836',
+                                                        buyer_addr : '서울특별시 강남구 삼성동',
+                                                        buyer_postcode : '123-456',
+                                                        m_redirect_url : 'https://www.yourdomain.com/payments/complete'
+                                                    }, function(rsp) {
+                                                        if ( rsp.success ) {
+                                                            var msg = '결제가 완료되었습니다.';
+                                                            msg += '결제 금액 : ' + rsp.paid_amount;
+                                                            msg += '카드 승인번호 : ' + rsp.apply_num;
+                                                        } else {
+                                                            var msg = '결제에 실패하였습니다.';
+                                                            msg += '에러내용 : ' + rsp.error_msg;
+                                                        }
+                                                        alert(msg);
+                                                    });
+                                                            });
+
+                                        });
+                                     </script>
                 </div>
                 <!-- /Project Image -->
 
@@ -219,6 +282,39 @@
                             <img src="{% static 'images/project03.jpg' %}" alt="">
                         </div>
                     </a>
+                    <button id="paid3" class="btn col-md-12" style = "margin:0px 0px 0px 0px;font-size:12px;">25x25x40(mm) SLA 방식 :120,000원</button>
+                    <script type="text/javascript">
+
+                                        $(function() {
+                                                $("#paid3").click(function() {
+                                                    var IMP = window.IMP; // 생략가능
+                                                    IMP.init('imp05811817');
+                                                    IMP.request_pay({
+                                                        pg : 'inicis', // version 1.1.0부터 지원.
+                                                        pay_method : 'card',
+                                                        name : '주문명: 방앗간 완성제품 구매',
+                                                        amount : '120000',
+                                                        buyer_email : 'iamport@siot.do',
+                                                        buyer_name : '이상호',
+                                                        buyer_tel : '010-9098-3836',
+                                                        buyer_addr : '서울특별시 강남구 삼성동',
+                                                        buyer_postcode : '123-456',
+                                                        m_redirect_url : 'https://www.yourdomain.com/payments/complete'
+                                                    }, function(rsp) {
+                                                        if ( rsp.success ) {
+                                                            var msg = '결제가 완료되었습니다.';
+                                                            msg += '결제 금액 : ' + rsp.paid_amount;
+                                                            msg += '카드 승인번호 : ' + rsp.apply_num;
+                                                        } else {
+                                                            var msg = '결제에 실패하였습니다.';
+                                                            msg += '에러내용 : ' + rsp.error_msg;
+                                                        }
+                                                        alert(msg);
+                                                    });
+                                                            });
+
+                                        });
+                                     </script>
                 </div>
                 <!-- /Project Image -->
 
@@ -229,6 +325,39 @@
                             <img src="{% static 'images/project04.jpg' %}" alt="">
                         </div>
                     </a>
+                    <button id="paid4" class="btn col-md-12" style = "margin:0px 0px 0px 0px;font-size:12px;">50x50x60(mm) SLA 방식 :180,000원</button>
+                    <script type="text/javascript">
+
+                                        $(function() {
+                                                $("#paid4").click(function() {
+                                                    var IMP = window.IMP; // 생략가능
+                                                    IMP.init('imp05811817');
+                                                    IMP.request_pay({
+                                                        pg : 'inicis', // version 1.1.0부터 지원.
+                                                        pay_method : 'card',
+                                                        name : '주문명: 방앗간 완성제품 구매',
+                                                        amount : '180000',
+                                                        buyer_email : 'iamport@siot.do',
+                                                        buyer_name : '이상호',
+                                                        buyer_tel : '010-9098-3836',
+                                                        buyer_addr : '서울특별시 강남구 삼성동',
+                                                        buyer_postcode : '123-456',
+                                                        m_redirect_url : 'https://www.yourdomain.com/payments/complete'
+                                                    }, function(rsp) {
+                                                        if ( rsp.success ) {
+                                                            var msg = '결제가 완료되었습니다.';
+                                                            msg += '결제 금액 : ' + rsp.paid_amount;
+                                                            msg += '카드 승인번호 : ' + rsp.apply_num;
+                                                        } else {
+                                                            var msg = '결제에 실패하였습니다.';
+                                                            msg += '에러내용 : ' + rsp.error_msg;
+                                                        }
+                                                        alert(msg);
+                                                    });
+                                                            });
+
+                                        });
+                                     </script>
                 </div>
                 <!-- /Project Image -->
 
@@ -239,6 +368,39 @@
                             <img src="{% static 'images/project05.jpg' %}" alt="">
                         </div>
                     </a>
+                    <button id="paid5" class="btn col-md-12" style = "margin:0px 0px 0px 0px;font-size:12px;">60x30x40(mm) SLA 방식 :190,000원</button>
+                    <script type="text/javascript">
+
+                                        $(function() {
+                                                $("#paid5").click(function() {
+                                                    var IMP = window.IMP; // 생략가능
+                                                    IMP.init('imp05811817');
+                                                    IMP.request_pay({
+                                                        pg : 'inicis', // version 1.1.0부터 지원.
+                                                        pay_method : 'card',
+                                                        name : '주문명: 방앗간 완성제품 구매',
+                                                        amount : '190000',
+                                                        buyer_email : 'iamport@siot.do',
+                                                        buyer_name : '이상호',
+                                                        buyer_tel : '010-9098-3836',
+                                                        buyer_addr : '서울특별시 강남구 삼성동',
+                                                        buyer_postcode : '123-456',
+                                                        m_redirect_url : 'https://www.yourdomain.com/payments/complete'
+                                                    }, function(rsp) {
+                                                        if ( rsp.success ) {
+                                                            var msg = '결제가 완료되었습니다.';
+                                                            msg += '결제 금액 : ' + rsp.paid_amount;
+                                                            msg += '카드 승인번호 : ' + rsp.apply_num;
+                                                        } else {
+                                                            var msg = '결제에 실패하였습니다.';
+                                                            msg += '에러내용 : ' + rsp.error_msg;
+                                                        }
+                                                        alert(msg);
+                                                    });
+                                                            });
+
+                                        });
+                                     </script>
                 </div>
                 <!-- /Project Image -->
 
@@ -249,6 +411,39 @@
                             <img src="{% static 'images/project06.jpg' %}" alt="">
                         </div>
                     </a>
+                    <button id="paid6" class="btn col-md-12" style = "margin:0px 0px 0px 0px;font-size:12px;">50x10x80(mm) SLA 방식 :100,000원</button>
+                    <script type="text/javascript">
+
+                                        $(function() {
+                                                $("#paid6").click(function() {
+                                                    var IMP = window.IMP; // 생략가능
+                                                    IMP.init('imp05811817');
+                                                    IMP.request_pay({
+                                                        pg : 'inicis', // version 1.1.0부터 지원.
+                                                        pay_method : 'card',
+                                                        name : '주문명: 방앗간 완성제품 구매',
+                                                        amount : '100000',
+                                                        buyer_email : 'iamport@siot.do',
+                                                        buyer_name : '이상호',
+                                                        buyer_tel : '010-9098-3836',
+                                                        buyer_addr : '서울특별시 강남구 삼성동',
+                                                        buyer_postcode : '123-456',
+                                                        m_redirect_url : 'https://www.yourdomain.com/payments/complete'
+                                                    }, function(rsp) {
+                                                        if ( rsp.success ) {
+                                                            var msg = '결제가 완료되었습니다.';
+                                                            msg += '결제 금액 : ' + rsp.paid_amount;
+                                                            msg += '카드 승인번호 : ' + rsp.apply_num;
+                                                        } else {
+                                                            var msg = '결제에 실패하였습니다.';
+                                                            msg += '에러내용 : ' + rsp.error_msg;
+                                                        }
+                                                        alert(msg);
+                                                    });
+                                                            });
+
+                                        });
+                                     </script>
                 </div>
                 <!-- /Project Image -->
 
@@ -259,6 +454,40 @@
                             <img src="{% static 'images/project07.jpg' %}" alt="">
                         </div>
                     </a>
+
+                    <button id="paid7" class="btn col-md-12" style = "margin:0px 0px 0px 0px;font-size:12px;">50x10x80(mm) SLA 방식 :100,000원</button>
+                    <script type="text/javascript">
+
+                                        $(function() {
+                                                $("#paid7").click(function() {
+                                                    var IMP = window.IMP; // 생략가능
+                                                    IMP.init('imp05811817');
+                                                    IMP.request_pay({
+                                                        pg : 'inicis', // version 1.1.0부터 지원.
+                                                        pay_method : 'card',
+                                                        name : '주문명: 방앗간 완성제품 구매',
+                                                        amount : '100000',
+                                                        buyer_email : 'iamport@siot.do',
+                                                        buyer_name : '이상호',
+                                                        buyer_tel : '010-9098-3836',
+                                                        buyer_addr : '서울특별시 강남구 삼성동',
+                                                        buyer_postcode : '123-456',
+                                                        m_redirect_url : 'https://www.yourdomain.com/payments/complete'
+                                                    }, function(rsp) {
+                                                        if ( rsp.success ) {
+                                                            var msg = '결제가 완료되었습니다.';
+                                                            msg += '결제 금액 : ' + rsp.paid_amount;
+                                                            msg += '카드 승인번호 : ' + rsp.apply_num;
+                                                        } else {
+                                                            var msg = '결제에 실패하였습니다.';
+                                                            msg += '에러내용 : ' + rsp.error_msg;
+                                                        }
+                                                        alert(msg);
+                                                    });
+                                                            });
+
+                                        });
+                                     </script>
                 </div>
                 <!-- /Project Image -->
 
@@ -269,6 +498,39 @@
                             <img src="{% static 'images/project08.jpg' %}" alt="">
                         </div>
                     </a>
+                    <button id="paid8" class="btn col-md-12" style = "margin:0px 0px 0px 0px;font-size:12px;">50x50x50(mm) SLA 방식 :140,000원</button>
+                    <script type="text/javascript">
+
+                                        $(function() {
+                                                $("#paid8").click(function() {
+                                                    var IMP = window.IMP; // 생략가능
+                                                    IMP.init('imp05811817');
+                                                    IMP.request_pay({
+                                                        pg : 'inicis', // version 1.1.0부터 지원.
+                                                        pay_method : 'card',
+                                                        name : '주문명: 방앗간 완성제품 구매',
+                                                        amount : '140000',
+                                                        buyer_email : 'iamport@siot.do',
+                                                        buyer_name : '이상호',
+                                                        buyer_tel : '010-9098-3836',
+                                                        buyer_addr : '서울특별시 강남구 삼성동',
+                                                        buyer_postcode : '123-456',
+                                                        m_redirect_url : 'https://www.yourdomain.com/payments/complete'
+                                                    }, function(rsp) {
+                                                        if ( rsp.success ) {
+                                                            var msg = '결제가 완료되었습니다.';
+                                                            msg += '결제 금액 : ' + rsp.paid_amount;
+                                                            msg += '카드 승인번호 : ' + rsp.apply_num;
+                                                        } else {
+                                                            var msg = '결제에 실패하였습니다.';
+                                                            msg += '에러내용 : ' + rsp.error_msg;
+                                                        }
+                                                        alert(msg);
+                                                    });
+                                                            });
+
+                                        });
+                                     </script>
                 </div>
                 <!-- /Project Image -->
 
@@ -489,11 +751,11 @@
                 <!-- /Copyright -->
 
                 <!-- Footer Social -->
-                <div class="col-md-4 col-sm-12">
+                 <div class="col-md-4 col-sm-12">
                     <div class="links">
-                        <a  href="#">Information</a>
-                        <a  href="#">서비스 정책</a>
-                        <a  href="#">개인정보제공 정책 </a>
+                        <a  href="{% url 'information' %}">Information</a>
+                        <a  href="{% url 'regulation' %}">서비스 정책</a>
+                        <a  href="{% url 'privacy' %}">개인정보제공 정책 </a>
                     </div>
                 </div>
                 <!-- /Footer Social -->

@@ -19,5 +19,11 @@ class UploadForm(forms.ModelForm):
     class Meta:
         model = StlFile
         fields = ('file', 'comment')
-        exclude = ('thumnail_image', 'owner')
-        
+        exclude = ('thumnail_image', 'owner', 'time', 'price',)
+
+
+class UploadForm2(forms.ModelForm):
+    class Meta:
+        model = StlFile
+        fields = ('address', 'phone_number')
+

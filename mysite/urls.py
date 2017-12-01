@@ -16,6 +16,8 @@ Including another URLconf
 from django.conf.urls import url,include
 from django.contrib import admin
 from threedbang import views as threedbang_views
+from threedbang import views2 as threedbang_views_2
+
 # from django.contrib.auth import views as auth_views
 from django.conf import settings
 from django.conf.urls.static import static
@@ -37,7 +39,10 @@ urlpatterns = [
     url(r'^mypagelist/$',login_required(threedbang_views.MypageListView.as_view()), name='mypagelist'),
     url(r'^aboutus/$', threedbang_views.AboutUsTemplateView.as_view(),name='aboutus'),
     url(r'^service/$', threedbang_views.ServiceTemplateView.as_view(),name='service'),
-    url(r'^test/$', threedbang_views.TestTemplateView.as_view(), name='test'),
+    url(r'^address/$', threedbang_views_2.uploadaddress, name='address'),
+    url(r'^privacy/$', threedbang_views.RegualtionTemplateView1.as_view(), name='privacy'),
+    url(r'^regulation/$', threedbang_views.RegualtionTemplateView2.as_view(), name='regulation'),
+    url(r'^information/$', threedbang_views.RegualtionTemplateView3.as_view(), name='information'),
 
 ]
 

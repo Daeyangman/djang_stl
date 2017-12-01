@@ -81,7 +81,7 @@
                         <ul class="nav navbar-nav navbar-right">
 
                             <li><a class="smooth-scroll" href="{% url 'bootstrap' %}">홈</a></li>
-                            <li><a class="smooth-scroll" href="{% url 'aboutus' %}">방앗간 소개</a></li>
+                            <li><a class="smooth-scroll" href="{% url 'aboutus' %}">방앗간 제품</a></li>
                             <li><a class="smooth-scroll" href="{% url 'service' %}">제공 서비스</a></li>
 
                             <li><a class="smooth-scroll" href="{% url 'mypage' %}">나의 방앗간</a></li>
@@ -121,7 +121,7 @@
 
         <!-- Slide -->
 
-        <div class="item mask mask-black" style="background: url(/static/images/home3.jpeg) no-repeat center top / cover;" data-stellar-background-ratio="0.4">
+        <div class="item mask mask-black" style="background: url(/static/images/background.jpeg) no-repeat center top / cover;" data-stellar-background-ratio="0.4">
             <div class="full-wh relative" data-stellar-ratio="0.5">
                 <div class="container" >
                     <div class="col-md-6 col-md-offset-2 relative">
@@ -766,9 +766,9 @@
                 <!-- Footer Social -->
                 <div class="col-md-4 col-sm-12">
                     <div class="links">
-                        <a  href="#">Information</a>
-                        <a  href="#">서비스 정책</a>
-                        <a  href="#">개인정보제공 정책 </a>
+                        <a  href="{% url 'information' %}">Information</a>
+                        <a  href="{% url 'regulation' %}">이용약관</a>
+                        <a  href="{% url 'privacy' %}">개인정보제공 정책 </a>
                     </div>
                 </div>
                 <!-- /Footer Social -->
