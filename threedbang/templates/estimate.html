@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Page title -->
+    <title>3D 방앗간</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% load staticfiles %}
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="{% static 'css/theme.css' %}">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
+    <script type="text/javascript" src="https://service.iamport.kr/js/iamport.payment-1.1.5.js"></script>
+
+</head>
+<body>
+ <nav id="navigation" class="navbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <!-- Navigation Header -->
+                    <div class="navbar-header">
+
+                        <!-- Toggle Button -->
+                        <button type="button"
+                                class="navbar-toggle collapsed"
+                                data-toggle="collapse"
+                                data-target="#main-menu"
+                                aria-expanded="false"
+                                aria-controls="main-menu">
+
+                            <span class="sr-only">Toggle Navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+
+                        </button>
+                        <!-- /Toggle Button -->
+
+                        <!-- Brand -->
+                        <a href="#" class="brand">
+
+                            <!-- Logo Big -->
+                            <div class="big">
+                                <span class="icon_cogs"></span> 3D 방앗간
+                            </div>
+                            <!-- /Logo Big -->
+
+                            <!-- Logo Small -->
+                            <div class="small">
+                                <span class="icon_cogs"></span>
+                            </div>
+                            <!-- /Logo Small -->
+
+                        </a>
+                        <!-- /Brand -->
+
+                    </div>
+                    <!-- /Navigation Header -->
+
+                    <!-- Navigation -->
+                    <div id="main-menu" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+
+                            <li><a class="smooth-scroll" href="{% url 'bootstrap' %}">홈</a></li>
+                            <li><a class="smooth-scroll" href="{% url 'aboutus' %}">방앗간 제품</a></li>
+                            <li><a class="smooth-scroll" href="{% url 'service' %}">제공 서비스</a></li>
+
+                            <li><a class="smooth-scroll" href="{% url 'mypage' %}">나의 방앗간</a></li>
+                            <li><a class="smooth-scroll" href="{% url 'login' %}">로그인 하기</a></li>
+
+                          <!-- /Navigation -->
+
+                        </ul>
+                    </div>
+                    <!-- /Navigation -->
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- /Navigation -->
+<!-- Preloader -->
+<!--<div id="preloader">-->
+    <!--<div class="loader"></div>-->
+<!--</div>-->
+<!-- /Preloader -->
+
+<!-- Header -->
+<!--<header id="home" class="header">-->
+
+
+
+    <!--&lt;!&ndash; Slider &ndash;&gt;-->
+    <!--<div id="carousel-home" class="slider owl-carousel owl-theme">-->
+        <!--&lt;!&ndash; Slide &ndash;&gt;-->
+        <!--<div class="item mask mask-black" style="background: url(/static/images/home3.jpeg) ; no-repeat center top / cover;" data-stellar-background-ratio="0.4">-->
+            <!--<div class="full-wh relative" data-stellar-ratio="0.5">-->
+                <!--<div class="container" >-->
+                    <!--<br>-->
+                    <!--<h3 class = "name text-left" style = "color : white;margin : 0px 10x 0px 10px; font-size:20px;">&nbsp;&nbsp;{{user.username}}님께서 요청하신 <strong style = "text-decoration:underline;">{{stlfile.filenamemake}}</strong> 모델의 견적내용입니다</h3><br><br>-->
+                        <!--<div class="col-lg-6 col-md-6 col-sm12 animated fadeIn wow" data-wow-duration="0.9s" data-wow-delay="0.2s" style = "margin:0px 0px 0px 0px;">-->
+                                <!--<div class="plan">-->
+                                    <!--<h3 class= "text-left" style = "margin : 0px 0px 0px 10px ;font-size :16px;"><p style ="text-decoration:underline;">FDM(적층 방식)이용 시</p></h3><br>-->
+                                    <!--<h4 class="text-left"style = "color : gray;margin : 0px 0px 0px 10px ;font-size :10px;">가격대비 성능 우수&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;빠른 출력속도&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;적층방식으로 표면이 매끄럽지는 않음</h4>-->
+                                    <!--<br>-->
+                                    <!--&lt;!&ndash;<HR width="95%" align="right" style="margin : 0px 0px 10px 10px;color:gray; background-color:gray; height:1px;" />&ndash;&gt;-->
+                                    <!--<h3 class= "text-left" style = "margin : 0px 0px 0px 10px ;font-size :12px;">재료비</h3><br>-->
+                                    <!--<h3 class= "text-left" style = "margin : 0px 0px 0px 10px ;font-size :8px;">ABS 또는 PLA</h3><br>-->
+                                    <!--<hr width="95%" align="right" style="margin : 0px 0px 10px 10px;color:gray; background-color:gray; height:1px;" />-->
+                                    <!--<h3 class= "text-right" style = "margin : 0px 5px 0px 10px ;font-size :12px;">재료비 합계:50,000원</h3><br>-->
+                                    <!--<h3 class= "text-left" style = "margin : 0px 0px 0px 10px ;font-size :12px;">장비가동 및 후가공 비</h3><br>-->
+                                    <!--<h3 class= "text-left" style = "margin : 0px 0px 0px 10px ;font-size :8px;">출력시간:(    ),서포터 제거 , 표면처리</h3><br>-->
+                                    <!--<hr width="95%" align="right" style="margin : 0px 0px 10px 10px;color:gray; background-color:gray; height:1px;" />-->
+                                    <!--<h3 class= "text-right" style = "margin : 0px 5px 0px 10px ;font-size :12px;">장비가동비 합계:50,000원</h3><br>-->
+                                    <!--<h3 class= "text-right" style = "margin : 0px 5px 0px 10px ;font-size :14px;"><strong>총 소요시간 : 36시간 총 금액 합계:100,000원</strong></h3><br>-->
+
+
+
+                                <!--</div>-->
+                        <!--</div>-->
+                     <!--<div class="col-lg-6 col-md-6 col-sm12 animated fadeIn wow" data-wow-duration="0.9s" data-wow-delay="0.2s">-->
+                                <!--<div class="plan">-->
+
+                                   <!--<h3 class= "text-left" style = "margin : 0px 0px 0px 10px ;font-size :16px;"><p style ="text-decoration:underline;">SLA(레이져 방식)이용 시</p></h3><br>-->
+                                    <!--<h4 class="text-left"style = "color : gray;margin : 0px 0px 0px 10px ;font-size :10px;">FDM 대비 가공비 높음&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;정밀도 우수&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;표면 매끄러움</h4>-->
+                                    <!--<br>-->
+                                    <!--&lt;!&ndash;<HR width="95%" align="right" style="margin : 0px 0px 10px 10px;color:gray; background-color:gray; height:1px;" />&ndash;&gt;-->
+                                    <!--<h3 class= "text-left" style = "margin : 0px 0px 0px 10px ;font-size :12px;">재료비</h3><br>-->
+                                    <!--<h3 class= "text-left" style = "margin : 0px 0px 0px 10px ;font-size :8px;">SLA 레진</h3><br>-->
+                                    <!--<hr width="95%" align="right" style="margin : 0px 0px 10px 10px;color:gray; background-color:gray; height:1px;" />-->
+                                    <!--<h3 class= "text-right" style = "margin : 0px 5px 0px 10px ;font-size :12px;">재료비 합계:50,000원</h3><br>-->
+                                    <!--<h3 class= "text-left" style = "margin : 0px 0px 0px 10px ;font-size :12px;">장비가동 및 후가공 비</h3><br>-->
+                                    <!--<h3 class= "text-left" style = "margin : 0px 0px 0px 10px ;font-size :8px;">출력시간: ( ),서포터 제거 , 표면처리,UV경화,IPA 세척 등등</h3><br>-->
+                                    <!--<hr width="95%" align="right" style="margin : 0px 0px 10px 10px;color:gray; background-color:gray; height:1px;" />-->
+                                    <!--<h3 class= "text-right" style = "margin : 0px 5px 0px 10px ;font-size :12px;">장비가동비 합계:50,000원</h3><br>-->
+                                    <!--<h3 class= "text-right" style = "margin : 0px 5px 0px 10px ;font-size :14px;"><strong>총 소요시간 : 36시간 총 금액 합계:100,000원</strong></h3><br>-->
+
+
+                                <!--</div>-->
+                        <!--</div>-->
+                <!--</div>-->
+
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--&lt;!&ndash; /Slider &ndash;&gt;-->
+    <!--</div>-->
+
+
+
+<!--</header>-->
+
+<section id="services" class="section" style = "margin : 0px 0px 0px 0px ; padding : 0px 0px 0px 0px;">
+        <!-- Slide -->
+
+        <div class="item mask mask-black" style="background: url(/static/images/home3.jpeg) ; no-repeat center top / cover;" data-stellar-background-ratio="0.4">
+            <div class="full-wh relative" data-stellar-ratio="0.5">
+                <div class="container" >
+                    <br>
+                    <h3 class = "name text-left" style = "color : white;margin : 0px 10x 0px 10px; font-size:20px;">&nbsp;&nbsp;{{user.username}}님께서 요청하신 <strong style = "text-decoration:underline;">{{stlfile.filenamemake}}</strong> 모델의 견적내용입니다</h3><br><br>
+                        <div class="col-lg-6 col-md-6 col-sm12 animated fadeIn wow" data-wow-duration="0.9s" data-wow-delay="0.2s" style = "margin:0px 0px 0px 0px;">
+                                <div class="plan">
+                                    <h3 class= "text-left" style = "margin : 0px 0px 0px 10px ;font-size :16px;"><p style ="text-decoration:underline;">FDM(적층 방식)이용 시</p></h3><br>
+                                    <h4 class="text-left"style = "color : gray;margin : 0px 0px 0px 10px ;font-size :10px;">가격대비 성능 우수&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;빠른 출력속도&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;적층방식으로 표면이 매끄럽지는 않음</h4>
+                                    <br>
+                                    <!--<HR width="95%" align="right" style="margin : 0px 0px 10px 10px;color:gray; background-color:gray; height:1px;" />-->
+                                    <h3 class= "text-left" style = "margin : 0px 0px 0px 10px ;font-size :12px;">재료비</h3><br>
+                                    <h3 class= "text-left" style = "margin : 0px 0px 0px 10px ;font-size :8px;">ABS 또는 PLA</h3><br>
+                                    <hr width="95%" align="right" style="margin : 0px 0px 10px 10px;color:gray; background-color:gray; height:1px;" />
+                                    <h3 class= "text-right" style = "margin : 0px 5px 0px 10px ;font-size :12px;">재료비 합계:50,000원</h3><br>
+                                    <h3 class= "text-left" style = "margin : 0px 0px 0px 10px ;font-size :12px;">장비가동 및 후가공 비</h3><br>
+                                    <h3 class= "text-left" style = "margin : 0px 0px 0px 10px ;font-size :8px;">출력시간:(    ),서포터 제거 , 표면처리</h3><br>
+                                    <hr width="95%" align="right" style="margin : 0px 0px 10px 10px;color:gray; background-color:gray; height:1px;" />
+                                    <h3 class= "text-right" style = "margin : 0px 5px 0px 10px ;font-size :12px;">장비가동비 합계:50,000원</h3><br>
+                                    <h3 class= "text-right" style = "margin : 0px 5px 0px 10px ;font-size :14px;"><strong>총 소요시간 : 36시간 총 금액 합계:100,000원</strong></h3><br>
+                                </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm12 animated fadeIn wow" data-wow-duration="0.9s" data-wow-delay="0.2s">
+                                <div class="plan">
+
+                                   <h3 class= "text-left" style = "margin : 0px 0px 0px 10px ;font-size :16px;"><p style ="text-decoration:underline;">SLA(레이져 방식)이용 시</p></h3><br>
+                                    <h4 class="text-left"style = "color : gray;margin : 0px 0px 0px 10px ;font-size :10px;">FDM 대비 가공비 높음&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;정밀도 우수&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;표면 매끄러움</h4>
+                                    <br>
+                                    <!--<HR width="95%" align="right" style="margin : 0px 0px 10px 10px;color:gray; background-color:gray; height:1px;" />-->
+                                    <h3 class= "text-left" style = "margin : 0px 0px 0px 10px ;font-size :12px;">재료비</h3><br>
+                                    <h3 class= "text-left" style = "margin : 0px 0px 0px 10px ;font-size :8px;">SLA 레진</h3><br>
+                                    <hr width="95%" align="right" style="margin : 0px 0px 10px 10px;color:gray; background-color:gray; height:1px;" />
+                                    <h3 class= "text-right" style = "margin : 0px 5px 0px 10px ;font-size :12px;">재료비 합계:50,000원</h3><br>
+                                    <h3 class= "text-left" style = "margin : 0px 0px 0px 10px ;font-size :12px;">장비가동 및 후가공 비</h3><br>
+                                    <h3 class= "text-left" style = "margin : 0px 0px 0px 10px ;font-size :8px;">출력시간: ( ),서포터 제거 , 표면처리,UV경화,IPA 세척 등등</h3><br>
+                                    <hr width="95%" align="right" style="margin : 0px 0px 10px 10px;color:gray; background-color:gray; height:1px;" />
+                                    <h3 class= "text-right" style = "margin : 0px 5px 0px 10px ;font-size :12px;">장비가동비 합계:50,000원</h3><br>
+                                    <h3 class= "text-right" style = "margin : 0px 5px 0px 10px ;font-size :14px;"><strong>총 소요시간 : 36시간 총 금액 합계:100,000원</strong></h3><br>
+                                </div>
+                        </div>
+                </div>
+            </div>
+         </div>
+</section>
+
+
+<!-- /Header -->
+
+<!-- /Modal: Result Message -->
+
+<!-- SCRIPTS -->
+<script src="{% static 'js/jquery-2.2.0.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'js/jquery.validate.min.js' %}"></script>
+<script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+<script src="{% static 'js/wow.min.js' %}"></script>
+<script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+<script src="{% static 'js/jquery.appear.js' %}"></script>
+<script src="{% static 'js/general.js' %}"></script>
+
+
+<!-- /SCRIPTS -->
+</body>
+
+</html>

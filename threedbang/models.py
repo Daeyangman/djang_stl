@@ -9,12 +9,12 @@ from django.utils import timezone
 # Create your models here.
 def user_path(instance , filename):
     # from random import choice
-    import string
+    # import string
     # arr =  [choice(string.ascii_letters) for _ in range(8) ]
     # pid = ''.join(arr)
-    extension = filename.split('.')[1]
+    # extension = filename.split('.')[1]
     # return '%s/%s.%s' % (instance.owner.username , pid , extension)
-    return '%s/%s' % (instance.owner.username,extension)
+    return '%s/%s' % (instance.owner.username,filename)
 
 
 class StlFile(models.Model):
@@ -23,11 +23,17 @@ class StlFile(models.Model):
     owner = models.ForeignKey(settings.AUTH_USER_MODEL)
     pub_date = models.DateTimeField(auto_now_add=True)
     volume = models.IntegerField(default = 0)
-    price = models.CharField(max_length = 255 , default = "곧 가격이 업데이트 됩니다!")
-    time = models.CharField(max_length = 255 ,default = "곧 가격이 업데이트 됩니다!")
-    address = models.CharField(max_length=255, default="여기에 주소를 입력해주세요, 구/신주소 무관")
-    phone_number = models.CharField(max_length = 255,default="-는 생략해주셔도 됩니다.")
+    price = models.CharField(max_length = 255 ,  default ="검토중")
+    time = models.CharField(max_length = 255 , default ="검토중")
+    address = models.CharField(max_length=255)
+    phone_number = models.CharField(max_length = 255)
     thumnail_image = models.ImageField(blank = True)
+    filenamemake = models.CharField(max_length=255)
+    def filenameMake(self):
+        self.save()
+        self.filenamemake = self.file.name.split('/')[1]
+        return self.filenamemake
+
     def meshMake(self):
         self.save()
         self.mesh = mesh.Mesh.from_file(self.file.path)

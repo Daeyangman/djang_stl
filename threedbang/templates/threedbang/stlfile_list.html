@@ -104,8 +104,10 @@
             <div class="full-wh relative" data-stellar-ratio="0.5">
                 <div class="container" >
                    <div class="col-md-12 col-md-offset-2 relative">
+                        <br><br><br><br>
                         <h1 class = 'aniamted fadeInDown wow' data-wow-delay = "0.2s" style="font-size: 20px;color: white;"> &nbsp;&nbsp;반갑습니다, <strong style="text-decoration:underline;">{{user.username}}님&nbsp;</strong>작업 리스트 페이지입니다.</h1>
-                        <h1 class = 'aniamted fadeInDown wow' data-wow-delay = "0.2s" style="font-size: 15px;color: white; ">  &nbsp;&nbsp; 이곳에서 작업 진행 현황을 확인하실 수 있으세요!</h1>
+                        <h1 class = 'aniamted fadeInDown wow' data-wow-delay = "0.2s" style="font-size: 15px;color: white; ">  &nbsp;&nbsp; 이곳에서 작업 진행 현황 및 <strong>견적(평균 30분 소요)</strong>을 확인하실 수 있으세요!</h1>
+
                        <a href = "{% url 'mypage' %}"><button class = "btn" style="width:20%; margin:0px 0px 15px 13px;">추가 업로드 하기 </button></a>
                        <br><br>
                        <h1 class = 'aniamted fadeInDown wow' data-wow-delay = "0.2s" style="font-size: 20px;color: white; ">  &nbsp;&nbsp; 작업 요청 List</h1>
@@ -116,26 +118,53 @@
                             <div class="col-md-3 col-sm-12 animated fadeIn wow" data-wow-duration="0.9s" data-wow-delay="0.2s">
                                 <div class="plan">
 
-                                    <h3 class="name text-center">{{stlfile.file.name}}</h3>
+                                    <h3 class="name text-center">파일명 : <br>{{stlfile.filenamemake}}</h3>
 
                                     <ul class="features">
-                                        <li>Volume : {{stlfile.volume}}</li>
-                                        <li>업로드 일자 : {{stlfile.pub_date}}</li>
+                                        <li>업로드 일자 :<br> {{stlfile.pub_date}}</li>
                                         <br>
                                         <li>예상 일자 : {{stlfile.time}}</li>
                                         <li>예상 가격 : {{stlfile.price}}</li>
 
 
                                     </ul>
+                                    {% if stlfile.price != '검토중' %}
+                                    <a href = "{% url 'estimate' filekey=stlfile.pk %}"><button  class="btn btn-theme"><i class="icon fa fa-fw fa-check"></i> <span class="text">상세보기</span></button></a>
+                                    {% else %}
+                                    <a href = #><button  class="btn btn-theme"><i class="icon fa fa-fw fa-check"></i> <span class="text">검토중</span></button></a>
 
-                                    <a href = "{% url 'address' %}"><button id = 'paid' class="btn btn-theme"><i class="icon fa fa-fw fa-check"></i> <span class="text">결제하기</span></button></a>
+                                    {% endif %}
 
                                 </div>
+
                             </div>
                         {% endfor %}
                         {% endif %}
+                        <br><br>
+
+
+                       <br><br>
+
+
+
 
                    </div>
+                       <!-- pagenation nav -->
+                            {% if is_paginated %}
+                                    <nav aria-label="...">
+                                        <ul class="pager">
+                                          {% if page_obj.has_previous %}
+                                          <li><a href="{%url 'mypagelist' %}?page={{ page_obj.previous_page_number }}" style = "margin:5px 5px 0px 5px;">이전</a></li>
+                                          {% endif %}
+                                          <li> <a href="#" style = "margin:5px 5px 0px 5px;">페이지 {{ page_obj.number }} / {{ page_obj.paginator.num_pages }} </a></li>
+                                          {% if page_obj.has_next %}
+                                          <li>
+                                            <a href="{%url 'mypagelist'%}?page={{ page_obj.next_page_number }}" style = "margin:5px 5px 0px 5px;">다음</a>
+                                          </li>
+                                          {% endif %}
+                                        </ul>
+                                    </nav>
+                                {% endif %}
                 </div>
             </div>
          </div>

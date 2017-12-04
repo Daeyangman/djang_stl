@@ -43,6 +43,7 @@ urlpatterns = [
     url(r'^privacy/$', threedbang_views.RegualtionTemplateView1.as_view(), name='privacy'),
     url(r'^regulation/$', threedbang_views.RegualtionTemplateView2.as_view(), name='regulation'),
     url(r'^information/$', threedbang_views.RegualtionTemplateView3.as_view(), name='information'),
+    url(r'^mypagelist/(?P<filekey>[0-9]+)/estimate/$', threedbang_views.estimate, name='estimate'),
 
 ]
 
