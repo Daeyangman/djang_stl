@@ -195,39 +195,10 @@
                             <img src="{% static 'images/project01.jpg' %}" alt="">
                         </div>
                     </a>
-                    <button id="paid1" class="btn col-md-12" style = "margin:0px 0px 0px 0px;font-size:12px;">30x30x30(mm) FDM 방식 :50,000원</button>
-                    <script type="text/javascript">
+                    <a href="#" data-toggle="modal" data-target="#modal_1">
+                    <button class="btn col-md-12" style = "margin:0px 0px 0px 0px;font-size:12px;">30x30x30(mm) FDM 방식 :50,000원</button>
+                    </a>
 
-                                        $(function() {
-                                                $("#paid1").click(function() {
-                                                    var IMP = window.IMP; // 생략가능
-                                                    IMP.init('imp05811817');
-                                                    IMP.request_pay({
-                                                        pg : 'inicis', // version 1.1.0부터 지원.
-                                                        pay_method : 'card',
-                                                        name : '주문명: 방앗간 완성제품 구매',
-                                                        amount : '50000',
-                                                        buyer_email : 'iamport@siot.do',
-                                                        buyer_name : '이상호',
-                                                        buyer_tel : '010-9098-3836',
-                                                        buyer_addr : '서울특별시 강남구 삼성동',
-                                                        buyer_postcode : '123-456',
-                                                        m_redirect_url : 'https://www.yourdomain.com/payments/complete'
-                                                    }, function(rsp) {
-                                                        if ( rsp.success ) {
-                                                            var msg = '결제가 완료되었습니다.';
-                                                            msg += '결제 금액 : ' + rsp.paid_amount;
-                                                            msg += '카드 승인번호 : ' + rsp.apply_num;
-                                                        } else {
-                                                            var msg = '결제에 실패하였습니다.';
-                                                            msg += '에러내용 : ' + rsp.error_msg;
-                                                        }
-                                                        alert(msg);
-                                                    });
-                                                            });
-
-                                        });
-                                     </script>
                 </div>
 
                 <!-- /Project Image -->
@@ -239,39 +210,9 @@
                             <img src="{% static 'images/project02.jpg' %}" alt="">
                         </div>
                     </a>
-                    <button id="paid2" class="btn col-md-12" style = "margin:0px 0px 0px 0px;font-size:12px;">40x40x40(mm) FDM 방식 :70,000원</button>
-                    <script type="text/javascript">
-
-                                        $(function() {
-                                                $("#paid2").click(function() {
-                                                    var IMP = window.IMP; // 생략가능
-                                                    IMP.init('imp05811817');
-                                                    IMP.request_pay({
-                                                        pg : 'inicis', // version 1.1.0부터 지원.
-                                                        pay_method : 'card',
-                                                        name : '주문명: 방앗간 완성제품 구매',
-                                                        amount : '70000',
-                                                        buyer_email : 'iamport@siot.do',
-                                                        buyer_name : '이상호',
-                                                        buyer_tel : '010-9098-3836',
-                                                        buyer_addr : '서울특별시 강남구 삼성동',
-                                                        buyer_postcode : '123-456',
-                                                        m_redirect_url : 'https://www.yourdomain.com/payments/complete'
-                                                    }, function(rsp) {
-                                                        if ( rsp.success ) {
-                                                            var msg = '결제가 완료되었습니다.';
-                                                            msg += '결제 금액 : ' + rsp.paid_amount;
-                                                            msg += '카드 승인번호 : ' + rsp.apply_num;
-                                                        } else {
-                                                            var msg = '결제에 실패하였습니다.';
-                                                            msg += '에러내용 : ' + rsp.error_msg;
-                                                        }
-                                                        alert(msg);
-                                                    });
-                                                            });
-
-                                        });
-                                     </script>
+                    <a href="#" data-toggle="modal" data-target="#modal_2">
+                    <button class="btn col-md-12" style = "margin:0px 0px 0px 0px;font-size:12px;">40x40x40(mm) FDM 방식 :70,000원</button>
+                    </a>
                 </div>
                 <!-- /Project Image -->
 
@@ -282,39 +223,9 @@
                             <img src="{% static 'images/project03.jpg' %}" alt="">
                         </div>
                     </a>
-                    <button id="paid3" class="btn col-md-12" style = "margin:0px 0px 0px 0px;font-size:12px;">25x25x40(mm) SLA 방식 :120,000원</button>
-                    <script type="text/javascript">
-
-                                        $(function() {
-                                                $("#paid3").click(function() {
-                                                    var IMP = window.IMP; // 생략가능
-                                                    IMP.init('imp05811817');
-                                                    IMP.request_pay({
-                                                        pg : 'inicis', // version 1.1.0부터 지원.
-                                                        pay_method : 'card',
-                                                        name : '주문명: 방앗간 완성제품 구매',
-                                                        amount : '120000',
-                                                        buyer_email : 'iamport@siot.do',
-                                                        buyer_name : '이상호',
-                                                        buyer_tel : '010-9098-3836',
-                                                        buyer_addr : '서울특별시 강남구 삼성동',
-                                                        buyer_postcode : '123-456',
-                                                        m_redirect_url : 'https://www.yourdomain.com/payments/complete'
-                                                    }, function(rsp) {
-                                                        if ( rsp.success ) {
-                                                            var msg = '결제가 완료되었습니다.';
-                                                            msg += '결제 금액 : ' + rsp.paid_amount;
-                                                            msg += '카드 승인번호 : ' + rsp.apply_num;
-                                                        } else {
-                                                            var msg = '결제에 실패하였습니다.';
-                                                            msg += '에러내용 : ' + rsp.error_msg;
-                                                        }
-                                                        alert(msg);
-                                                    });
-                                                            });
-
-                                        });
-                                     </script>
+                    <a href="#" data-toggle="modal" data-target="#modal_3">
+                    <button class="btn col-md-12" style = "margin:0px 0px 0px 0px;font-size:12px;">50x50x50(mm) SLA 방식 :120,000원</button>
+                    </a>
                 </div>
                 <!-- /Project Image -->
 
@@ -325,39 +236,9 @@
                             <img src="{% static 'images/project04.jpg' %}" alt="">
                         </div>
                     </a>
-                    <button id="paid4" class="btn col-md-12" style = "margin:0px 0px 0px 0px;font-size:12px;">50x50x60(mm) SLA 방식 :180,000원</button>
-                    <script type="text/javascript">
-
-                                        $(function() {
-                                                $("#paid4").click(function() {
-                                                    var IMP = window.IMP; // 생략가능
-                                                    IMP.init('imp05811817');
-                                                    IMP.request_pay({
-                                                        pg : 'inicis', // version 1.1.0부터 지원.
-                                                        pay_method : 'card',
-                                                        name : '주문명: 방앗간 완성제품 구매',
-                                                        amount : '180000',
-                                                        buyer_email : 'iamport@siot.do',
-                                                        buyer_name : '이상호',
-                                                        buyer_tel : '010-9098-3836',
-                                                        buyer_addr : '서울특별시 강남구 삼성동',
-                                                        buyer_postcode : '123-456',
-                                                        m_redirect_url : 'https://www.yourdomain.com/payments/complete'
-                                                    }, function(rsp) {
-                                                        if ( rsp.success ) {
-                                                            var msg = '결제가 완료되었습니다.';
-                                                            msg += '결제 금액 : ' + rsp.paid_amount;
-                                                            msg += '카드 승인번호 : ' + rsp.apply_num;
-                                                        } else {
-                                                            var msg = '결제에 실패하였습니다.';
-                                                            msg += '에러내용 : ' + rsp.error_msg;
-                                                        }
-                                                        alert(msg);
-                                                    });
-                                                            });
-
-                                        });
-                                     </script>
+                    <a href="#" data-toggle="modal" data-target="#modal_4">
+                    <button class="btn col-md-12" style = "margin:0px 0px 0px 0px;font-size:12px;">60x60x60(mm) FDM 방식 :180,000원</button>
+                    </a>
                 </div>
                 <!-- /Project Image -->
 
@@ -368,39 +249,10 @@
                             <img src="{% static 'images/project05.jpg' %}" alt="">
                         </div>
                     </a>
-                    <button id="paid5" class="btn col-md-12" style = "margin:0px 0px 0px 0px;font-size:12px;">60x30x40(mm) SLA 방식 :190,000원</button>
-                    <script type="text/javascript">
+                    <a href="#" data-toggle="modal" data-target="#modal_5">
+                    <button class="btn col-md-12" style = "margin:0px 0px 0px 0px;font-size:12px;">62x65x63(mm) FDM 방식 :190,000원</button>
+                    </a>
 
-                                        $(function() {
-                                                $("#paid5").click(function() {
-                                                    var IMP = window.IMP; // 생략가능
-                                                    IMP.init('imp05811817');
-                                                    IMP.request_pay({
-                                                        pg : 'inicis', // version 1.1.0부터 지원.
-                                                        pay_method : 'card',
-                                                        name : '주문명: 방앗간 완성제품 구매',
-                                                        amount : '190000',
-                                                        buyer_email : 'iamport@siot.do',
-                                                        buyer_name : '이상호',
-                                                        buyer_tel : '010-9098-3836',
-                                                        buyer_addr : '서울특별시 강남구 삼성동',
-                                                        buyer_postcode : '123-456',
-                                                        m_redirect_url : 'https://www.yourdomain.com/payments/complete'
-                                                    }, function(rsp) {
-                                                        if ( rsp.success ) {
-                                                            var msg = '결제가 완료되었습니다.';
-                                                            msg += '결제 금액 : ' + rsp.paid_amount;
-                                                            msg += '카드 승인번호 : ' + rsp.apply_num;
-                                                        } else {
-                                                            var msg = '결제에 실패하였습니다.';
-                                                            msg += '에러내용 : ' + rsp.error_msg;
-                                                        }
-                                                        alert(msg);
-                                                    });
-                                                            });
-
-                                        });
-                                     </script>
                 </div>
                 <!-- /Project Image -->
 
@@ -746,7 +598,7 @@
                 </div>
                 <div class="col-md-4 col-sm-12">
                     <p class="copyright">
-                        사업자등록번호 468-25-00548
+                        사업자등록번호 468-25-00548 대표:설재환
                 </div>
                 <!-- /Copyright -->
 
@@ -784,6 +636,419 @@
 <script src="{% static 'js/jquery.appear.js' %}"></script>
 <script src="{% static 'js/general.js' %}"></script>
 <!-- /SCRIPTS -->
+
+<!--<a href="#" class="btn btn-rounded btn-white-o" data-toggle="modal" data-target="#get-in-touch">Get In Touch</a>-->
+
+<div class="modal fade" id="modal_1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    <i class="fa fa-times"></i>
+                </button>
+                <h4 class="modal-title">FDM 제품 주문 가격:50,000원</h4>
+            </div>
+
+            <div class="modal-body">
+                <div class="row">
+
+                    <!-- Contact Form -->
+                    <div class="col-md-12 contact-form">
+                        <form class="form-ajax" method="post">
+                            <input type="hidden" name="form" value="Get In Touch Modal">
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <input type="text" name="name" class="form-control" placeholder="받으실 분 이름*" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="text" name="name" class="form-control" placeholder="받으실 분 전화번호*" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <input type="text" name="email" class="form-control" placeholder="받으실분 주소"><br>
+                                    <h5>본 제품은 기성품으로 17시 이전 결제에 한하여 당일 배송됩니다.</h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-12 text-center">
+                                    <button id = "paid1" type="submit" class="btn btn-theme"><i class="icon fa fa-fw fa-paper-plane-o"></i> <span class="text">결제하기</span></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /Contact Form -->
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Modal: /Get In Touch -->
+ <script type="text/javascript">
+
+                                        $(function() {
+                                                $("#paid1").click(function() {
+                                                    var IMP = window.IMP; // 생략가능
+                                                    IMP.init('imp05811817');
+                                                    IMP.request_pay({
+                                                        pg : 'inicis', // version 1.1.0부터 지원.
+                                                        pay_method : 'card',
+                                                        name : '주문명: 방앗간 완성제품 구매',
+                                                        amount : '50000',
+                                                        buyer_email : 'iamport@siot.do',
+                                                        buyer_name : '이상호',
+                                                        buyer_tel : '010-9098-3836',
+                                                        buyer_addr : '서울특별시 강남구 삼성동',
+                                                        buyer_postcode : '123-456',
+                                                        m_redirect_url : 'https://www.yourdomain.com/payments/complete'
+                                                    }, function(rsp) {
+                                                        if ( rsp.success ) {
+                                                            var msg = '결제가 완료되었습니다.';
+                                                            msg += '결제 금액 : ' + rsp.paid_amount;
+                                                            msg += '카드 승인번호 : ' + rsp.apply_num;
+                                                        } else {
+                                                            var msg = '결제에 실패하였습니다.';
+                                                            msg += '에러내용 : ' + rsp.error_msg;
+                                                        }
+                                                        alert(msg);
+                                                    });
+                                                            });
+
+                                        });
+                                     </script>
+<div class="modal fade" id="modal_2" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    <i class="fa fa-times"></i>
+                </button>
+                <h4 class="modal-title">FDM 제품 주문 가격:70,000원</h4>
+            </div>
+
+            <div class="modal-body">
+                <div class="row">
+
+                    <!-- Contact Form -->
+                    <div class="col-md-12 contact-form">
+                        <form class="form-ajax" method="post">
+                            <input type="hidden" name="form" value="Get In Touch Modal">
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <input type="text" name="name" class="form-control" placeholder="받으실 분 이름*" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="text" name="name" class="form-control" placeholder="받으실 분 전화번호*" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <input type="text" name="email" class="form-control" placeholder="받으실분 주소"><br>
+                                    <h5>본 제품은 기성품으로 17시 이전 결제에 한하여 당일 배송됩니다.</h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-12 text-center">
+                                    <button id = "paid2" type="submit" class="btn btn-theme"><i class="icon fa fa-fw fa-paper-plane-o"></i> <span class="text">결제하기</span></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /Contact Form -->
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Modal: /Get In Touch -->
+ <script type="text/javascript">
+
+                                        $(function() {
+                                                $("#paid2").click(function() {
+                                                    var IMP = window.IMP; // 생략가능
+                                                    IMP.init('imp05811817');
+                                                    IMP.request_pay({
+                                                        pg : 'inicis', // version 1.1.0부터 지원.
+                                                        pay_method : 'card',
+                                                        name : '주문명: 방앗간 완성제품 구매',
+                                                        amount : '70000',
+                                                        buyer_email : 'iamport@siot.do',
+                                                        buyer_name : '이상호',
+                                                        buyer_tel : '010-9098-3836',
+                                                        buyer_addr : '서울특별시 강남구 삼성동',
+                                                        buyer_postcode : '123-456',
+                                                        m_redirect_url : 'https://www.yourdomain.com/payments/complete'
+                                                    }, function(rsp) {
+                                                        if ( rsp.success ) {
+                                                            var msg = '결제가 완료되었습니다.';
+                                                            msg += '결제 금액 : ' + rsp.paid_amount;
+                                                            msg += '카드 승인번호 : ' + rsp.apply_num;
+                                                        } else {
+                                                            var msg = '결제에 실패하였습니다.';
+                                                            msg += '에러내용 : ' + rsp.error_msg;
+                                                        }
+                                                        alert(msg);
+                                                    });
+                                                            });
+
+                                        });
+                                     </script>
+<div class="modal fade" id="modal_3" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    <i class="fa fa-times"></i>
+                </button>
+                <h4 class="modal-title">SLA 제품 주문 가격:120,000원</h4>
+            </div>
+
+            <div class="modal-body">
+                <div class="row">
+
+                    <!-- Contact Form -->
+                    <div class="col-md-12 contact-form">
+                        <form class="form-ajax" method="post">
+                            <input type="hidden" name="form" value="Get In Touch Modal">
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <input type="text" name="name" class="form-control" placeholder="받으실 분 이름*" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="text" name="name" class="form-control" placeholder="받으실 분 전화번호*" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <input type="text" name="email" class="form-control" placeholder="받으실분 주소"><br>
+                                    <h5>본 제품은 기성품으로 17시 이전 결제에 한하여 당일 배송됩니다.</h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-12 text-center">
+                                    <button id = "paid3" type="submit" class="btn btn-theme"><i class="icon fa fa-fw fa-paper-plane-o"></i> <span class="text">결제하기</span></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /Contact Form -->
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Modal: /Get In Touch -->
+ <script type="text/javascript">
+
+                                        $(function() {
+                                                $("#paid3").click(function() {
+                                                    var IMP = window.IMP; // 생략가능
+                                                    IMP.init('imp05811817');
+                                                    IMP.request_pay({
+                                                        pg : 'inicis', // version 1.1.0부터 지원.
+                                                        pay_method : 'card',
+                                                        name : '주문명: 방앗간 완성제품 구매',
+                                                        amount : '120000',
+                                                        buyer_email : 'iamport@siot.do',
+                                                        buyer_name : '이상호',
+                                                        buyer_tel : '010-9098-3836',
+                                                        buyer_addr : '서울특별시 강남구 삼성동',
+                                                        buyer_postcode : '123-456',
+                                                        m_redirect_url : 'https://www.yourdomain.com/payments/complete'
+                                                    }, function(rsp) {
+                                                        if ( rsp.success ) {
+                                                            var msg = '결제가 완료되었습니다.';
+                                                            msg += '결제 금액 : ' + rsp.paid_amount;
+                                                            msg += '카드 승인번호 : ' + rsp.apply_num;
+                                                        } else {
+                                                            var msg = '결제에 실패하였습니다.';
+                                                            msg += '에러내용 : ' + rsp.error_msg;
+                                                        }
+                                                        alert(msg);
+                                                    });
+                                                            });
+
+                                        });
+                                     </script>
+<div class="modal fade" id="modal_4" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    <i class="fa fa-times"></i>
+                </button>
+                <h4 class="modal-title">SLA 제품 주문 가격:180,000원</h4>
+            </div>
+
+            <div class="modal-body">
+                <div class="row">
+
+                    <!-- Contact Form -->
+                    <div class="col-md-12 contact-form">
+                        <form class="form-ajax" method="post">
+                            <input type="hidden" name="form" value="Get In Touch Modal">
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <input type="text" name="name" class="form-control" placeholder="받으실 분 이름*" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="text" name="name" class="form-control" placeholder="받으실 분 전화번호*" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <input type="text" name="email" class="form-control" placeholder="받으실분 주소"><br>
+                                    <h5>본 제품은 기성품으로 17시 이전 결제에 한하여 당일 배송됩니다.</h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-12 text-center">
+                                    <button id = "paid4" type="submit" class="btn btn-theme"><i class="icon fa fa-fw fa-paper-plane-o"></i> <span class="text">결제하기</span></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /Contact Form -->
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Modal: /Get In Touch -->
+ <script type="text/javascript">
+
+                                        $(function() {
+                                                $("#paid4").click(function() {
+                                                    var IMP = window.IMP; // 생략가능
+                                                    IMP.init('imp05811817');
+                                                    IMP.request_pay({
+                                                        pg : 'inicis', // version 1.1.0부터 지원.
+                                                        pay_method : 'card',
+                                                        name : '주문명: 방앗간 완성제품 구매',
+                                                        amount : '180000',
+                                                        buyer_email : 'iamport@siot.do',
+                                                        buyer_name : '이상호',
+                                                        buyer_tel : '010-9098-3836',
+                                                        buyer_addr : '서울특별시 강남구 삼성동',
+                                                        buyer_postcode : '123-456',
+                                                        m_redirect_url : 'https://www.yourdomain.com/payments/complete'
+                                                    }, function(rsp) {
+                                                        if ( rsp.success ) {
+                                                            var msg = '결제가 완료되었습니다.';
+                                                            msg += '결제 금액 : ' + rsp.paid_amount;
+                                                            msg += '카드 승인번호 : ' + rsp.apply_num;
+                                                        } else {
+                                                            var msg = '결제에 실패하였습니다.';
+                                                            msg += '에러내용 : ' + rsp.error_msg;
+                                                        }
+                                                        alert(msg);
+                                                    });
+                                                            });
+
+                                        });
+                                     </script>
+<div class="modal fade" id="modal_5" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    <i class="fa fa-times"></i>
+                </button>
+                <h4 class="modal-title">SLA 제품 주문 가격:190,000원</h4>
+            </div>
+
+            <div class="modal-body">
+                <div class="row">
+
+                    <!-- Contact Form -->
+                    <div class="col-md-12 contact-form">
+                        <form class="form-ajax" method="post">
+                            <input type="hidden" name="form" value="Get In Touch Modal">
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <input type="text" name="name" class="form-control" placeholder="받으실 분 이름*" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="text" name="name" class="form-control" placeholder="받으실 분 전화번호*" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <input type="text" name="email" class="form-control" placeholder="받으실분 주소"><br>
+                                    <h5>본 제품은 기성품으로 17시 이전 결제에 한하여 당일 배송됩니다.</h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-12 text-center">
+                                    <button id = "paid5" type="submit" class="btn btn-theme"><i class="icon fa fa-fw fa-paper-plane-o"></i> <span class="text">결제하기</span></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /Contact Form -->
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Modal: /Get In Touch -->
+ <script type="text/javascript">
+
+                                        $(function() {
+                                                $("#paid5").click(function() {
+                                                    var IMP = window.IMP; // 생략가능
+                                                    IMP.init('imp05811817');
+                                                    IMP.request_pay({
+                                                        pg : 'inicis', // version 1.1.0부터 지원.
+                                                        pay_method : 'card',
+                                                        name : '주문명: 방앗간 완성제품 구매',
+                                                        amount : '190000',
+                                                        buyer_email : 'iamport@siot.do',
+                                                        buyer_name : '이상호',
+                                                        buyer_tel : '010-9098-3836',
+                                                        buyer_addr : '서울특별시 강남구 삼성동',
+                                                        buyer_postcode : '123-456',
+                                                        m_redirect_url : 'https://www.yourdomain.com/payments/complete'
+                                                    }, function(rsp) {
+                                                        if ( rsp.success ) {
+                                                            var msg = '결제가 완료되었습니다.';
+                                                            msg += '결제 금액 : ' + rsp.paid_amount;
+                                                            msg += '카드 승인번호 : ' + rsp.apply_num;
+                                                        } else {
+                                                            var msg = '결제에 실패하였습니다.';
+                                                            msg += '에러내용 : ' + rsp.error_msg;
+                                                        }
+                                                        alert(msg);
+                                                    });
+                                                            });
+
+                                        });
+                                     </script>
+
+
+
+
+
 
 </body>
 </html>
