@@ -23,109 +23,51 @@
 </head>
 <body>
 
-<!-- Preloader -->
-<!--<div id="preloader">-->
-    <!--<div class="loader"></div>-->
-<!--</div>-->
-<!-- /Preloader -->
 
-<!-- Header -->
-<header id="home" class="header">
 
-    <!-- Navigation -->
-    <nav id="navigation" class="navbar affix">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-
-                    <!-- Navigation Header -->
-                    <div class="navbar-header">
-
-                        <!-- Toggle Button -->
-                        <button type="button"
-                                class="navbar-toggle collapsed"
-                                data-toggle="collapse"
-                                data-target="#main-menu"
-                                aria-expanded="false"
-                                aria-controls="main-menu">
-
-                            <span class="sr-only">Toggle Navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-
-                        </button>
-                        <!-- /Toggle Button -->
-
-                        <!-- Brand -->
-                        <a href="#" class="brand">
-
-                            <!-- Logo Big -->
-                            <div class="big">
-                                <span class="icon_cogs"></span> 3D 방앗간
-                            </div>
-                            <!-- /Logo Big -->
-
-                            <!-- Logo Small -->
-                            <div class="small">
-                                <span class="icon_cogs"></span>
-                            </div>
-                            <!-- /Logo Small -->
-
-                        </a>
-                        <!-- /Brand -->
-
-                    </div>
-                    <!-- /Navigation Header -->
-
-                    <!-- Navigation -->
-                    <div id="main-menu">
-                        <ul class="nav navbar-nav navbar-right">
-
-                          <li><a class="smooth-scroll" href="{% url 'bootstrap' %}">홈</a></li>
-                          <li><a class="smooth-scroll" href="{% url 'aboutus' %}">방앗간 제품</a></li>
-                            <li><a class="smooth-scroll" href="{% url 'service' %}">다양한 서비스</a></li>
-                          <li><a class="smooth-scroll" href="{% url 'mypage' %}">나의 방앗간</a></li>
-                          <li><a class="smooth-scroll" href="{% url 'login' %}">로그인 하기</a></li>
-                        </ul>
-                    </div>
-                    <!-- /Navigation -->
-
-                </div>
-            </div>
-        </div>
-    </nav>
-    <!-- /Navigation -->
-
-    <!-- Slider -->
-    <div id="carousel-home" class="slider owl-carousel owl-theme">
+<section id="services" class="section" style = "margin : 0px 0px 0px 0px ; padding : 0px 0px 0px 0px;">
         <!-- Slide -->
-        <div class="item mask mask-black" style="background: url(/static/images/home3.jpeg) ; no-repeat center top / cover;" data-stellar-background-ratio="0.4">
-            <div class="full-wh relative" data-stellar-ratio="0.5">
-                <div class="container" >
-                   <div class="col-md-12 col-md-offset-2 relative">
-                            <div class="col-md-12 col-sm-12 animated fadeIn wow" data-wow-duration="0.9s" data-wow-delay="0.2s">
-                           <form method = "POST" action = "{% url 'address' %}" enctype="multipart/form-data" style="margin:0px 0px 0px 0px ; pading:0px 0px 0px 0px; ">
-                            {% csrf_token %}
-                            {% for field in form %}
-                                <div class="form-group">
-                                    <label style="font-size: 15px;color: white; " >{{ field.label_tag }}</label>
 
-                                    <div class="input" style = "color :#817f7f" >{{ field }}</div>
+<div>
+    <div>
+        <div>
+
+            <!--<div class="modal-header">-->
+                <!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true">-->
+                    <!--<i class="fa fa-times"></i>-->
+                <!--</button>-->
+
+
+            <!--</div>-->
+
+
+            <div class="modal-body">
+                <div class="row">
+
+
+                    <!-- Contact Form -->
+                    <div class="col-md-12 contact-form">
+                        <form class="form" method="POST" action = "">
+                        {%csrf_token%}
+                                    <h3 style = "text-decoration:underline;">주문서 작성</h3><br>
+
+                            <br>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <input type="text" id="id_name_user" name = "name_user" class="form-control" placeholder = "받으실분 성함">
                                 </div>
-
-                            {% endfor %}
-
-                                  <br>
-                               <button id="paid" class="btn" style="width:33.5%">결제하기</button>
+                                <div class="form-group col-md-6">
+                                    <input type="text" id="id_phone_number" name="phone_number" class="form-control" placeholder = "받으실분 전화번호">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-12">
                                     <br><br>
-
-                                  </form>
-                                  <br><br>
-                                    <input type="text" id="sample6_postcode" placeholder="우편번호">
-                                    <input type="button" onclick="sample6_execDaumPostcode()" style = "color :#817f7f" value="우편번호 찾기"><br>
-                                    <input type="text" id="sample6_address" placeholder="주소">
-                                    <input type="text" id="sample6_address2" placeholder="상세주소">
+                                    <h4>받으실분 주소</h4><br>
+                                    <input type="text" id="sample6_postcode" class="form-control" placeholder="우편번호" style = "margin: 0px 20px 10px 0px;"><br>
+                                    <input type="button" class="btn btn-theme" onclick="sample6_execDaumPostcode()" style = "color :#817f7f ;margin : 0px 30px 10px 0px; " value="우편번호 찾기"><br><br>
+                                    <input type="text" id="id_address" name = "address" class="form-control" placeholder="주소" style = "margin: 0px 20px 0px 0px;"><br>
+                                    <input type="text" id="id_detail_address" name ="detail_address" class="form-control" placeholder="상세주소">
 
                                     <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
                                     <script>
@@ -163,60 +105,38 @@
 
                                                     // 우편번호와 주소 정보를 해당 필드에 넣는다.
                                                     document.getElementById('sample6_postcode').value = data.zonecode; //5자리 새우편번호 사용
-                                                    document.getElementById('sample6_address').value = fullAddr;
+                                                    document.getElementById('id_address').value = fullAddr;
 
                                                     // 커서를 상세주소 필드로 이동한다.
-                                                    document.getElementById('sample6_address2').focus();
+                                                    document.getElementById('id_detail_address').focus();
                                                 }
                                             }).open();
                                         }
                                     </script>
-
-                                    <script type="text/javascript">
-
-                                        $(function() {
-                                                $("#paid1").click(function() {
-                                                    var IMP = window.IMP; // 생략가능
-                                                    IMP.init('imp05811817');
-                                                    IMP.request_pay({
-                                                        pg : 'inicis', // version 1.1.0부터 지원.
-                                                        pay_method : 'card',
-                                                        name : '주문명:결제테스트',
-                                                        amount : '10000',
-                                                        buyer_email : 'iamport@siot.do',
-                                                        buyer_name : '구매자이름',
-                                                        buyer_tel : '010-1234-5678',
-                                                        buyer_addr : '서울특별시 강남구 삼성동',
-                                                        buyer_postcode : '123-456',
-                                                        m_redirect_url : 'https://www.yourdomain.com/payments/complete'
-                                                    }, function(rsp) {
-                                                        if ( rsp.success ) {
-                                                            var msg = '결제가 완료되었습니다.';
-                                                            msg += '결제 금액 : ' + rsp.paid_amount;
-                                                            msg += '카드 승인번호 : ' + rsp.apply_num;
-                                                        } else {
-                                                            var msg = '결제에 실패하였습니다.';
-                                                            msg += '에러내용 : ' + rsp.error_msg;
-                                                        }
-                                                        alert(msg);
-                                                    });
-                                                            });
-
-                                        });
-                                     </script>
-                                     </div>
                                 </div>
                             </div>
-                     </div>
+                            <div class="row">
+                                <div class="form-group col-md-12 text-center">
+                                     <button id = "paid1" type="submit" class="btn btn-theme"><i class="icon fa fa-fw fa-paper-plane-o"></i> <span class="text">주문서 작성 완료하기</span></button>
 
-                   </div>
+
+                                </div></div>
+                        </form><br>
+                        </div>
+                    </div>
+                    <!-- /Contact Form -->
+
+
                 </div>
             </div>
-         </div>
-    </div>
-    <!-- /Slider -->
 
-</header>
+        </div>
+    </div>
+</div>
+<!-- Modal: /Get In Touch -->
+</section>
+
+
 <!-- /Header -->
 
 <!-- /Modal: Result Message -->

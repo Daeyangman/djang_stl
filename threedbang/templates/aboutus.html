@@ -23,7 +23,7 @@
 <body>
 
 <!-- Header -->
-<header id="home" class="header">
+<header id="home">
 
     <!-- Navigation -->
     <nav id="navigation" class="navbar">
@@ -51,11 +51,11 @@
                         <!-- /Toggle Button -->
 
                         <!-- Brand -->
-                        <a href="#" class="brand">
+                        <a href="{% url 'bootstrap' %}" class="brand">
 
                             <!-- Logo Big -->
                             <div class="big">
-                                <span class="icon_cogs"></span> 3D 방앗간
+                               <span class="icon_cogs"></span> 3D 방앗간
                             </div>
                             <!-- /Logo Big -->
 
@@ -67,7 +67,6 @@
 
                         </a>
                         <!-- /Brand -->
-
                     </div>
                     <!-- /Navigation Header -->
 
@@ -75,8 +74,7 @@
                     <div id="main-menu" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
 
-                            <li><a class="smooth-scroll" href="{% url 'bootstrap' %}">홈</a></li>
-                            <li><a class="smooth-scroll" href="{% url 'aboutus' %}">방앗간 제품</a></li>
+                            <li><a class="smooth-scroll" href="{% url 'aboutus' %}">방앗간 소개</a></li>
                             <li><a class="smooth-scroll" href="{% url 'service' %}">제공 서비스</a></li>
 
                             <li><a class="smooth-scroll" href="{% url 'mypage' %}">나의 방앗간</a></li>
@@ -92,74 +90,6 @@
             </div>
         </div>
     </nav>
-    <!-- /Navigation -->
-    <!-- Section: About -->
-    <section id="about" class="section">
-        <div class="container">
-
-            <!-- Section Header -->
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3">
-                    <header class="text-center">
-                        <h2 class="section-title underline">About Us</h2>
-                        <p class="section-subtitle">
-                            3D 방앗간은 저렴한 가격 , 24시간 견적 출력 서비스 , 365일 연중무휴 , 다양한 방식의 출력등을
-                            제공합니다
-                        </p>
-                    </header>
-                </div>
-            </div>
-            <!-- /Section Header -->
-
-            <!-- Section Content -->
-            <div class="row section-content">
-
-                <!-- About Block -->
-                <div class="col-md-3 col-sm-6 col animated fadeIn wow" data-wow-duration="0.9s">
-                    <span class="glyphicon glyphicon-time" style ></span>
-                    <h3 class="title">24hour Available</h3>
-                    <p class="description">
-                        방앗간은 쉴틈이 없이 돌아갑니다. 24시간 상담 및 견적 그리고 출력 가능합니다
-                    </p>
-                </div>
-                <!-- /About Block -->
-
-                <!-- About Block -->
-                <div class="col-md-3 col-sm-6 col animated fadeIn wow" data-wow-duration="0.9s" data-wow-delay="0.2s">
-                    <i class="glyphicon glyphicon-usd"></i>
-                    <h3 class="title">Cheapest Price</h3>
-                    <p class="description">
-                        업계 최저가를 보장합니다.(feat High qualities)
-                    </p>
-                </div>
-                <!-- /About Block -->
-
-                <!-- About Block -->
-                <div class="col-md-3 col-sm-6 col animated fadeIn wow" data-wow-duration="0.9s" data-wow-delay="0.4s">
-                    <span class="glyphicon glyphicon-transfer"></span>
-                    <h3 class="title">Machine Learning</h3>
-                    <p class="description">
-                        인공지능 알고리즘을 활용한 프린팅 Process 구축을 통해 가장 쉽고 빠르게 대응이 가능합니다
-                    </p>
-                </div>
-                <!-- /About Block -->
-
-                <!-- About Block -->
-                <div class="col-md-3 col-sm-6 col animated fadeIn wow" data-wow-duration="0.9s" data-wow-delay="0.6s">
-                    <span class="glyphicon glyphicon-th-list"></span>
-                    <h3 class="title">Variety</h3>
-                    <p class="description">
-                        FDM , SLA등의 프린팅 방식과 다양한 재질이<br> 가능합니다.
-                    </p>
-                </div>
-                <!-- /About Block -->
-
-
-            </div>
-            <!-- /Section Content -->
-
-        </div>
-    </section>
 </header>
 <!-- /Header -->
 
@@ -176,9 +106,9 @@
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
                     <header class="text-center">
-                        <h2 class="section-title underline">방앗간 제품</h2>
+                        <h2 class="section-title underline">방앗간 포트폴리오</h2>
                         <p class="section-subtitle">
-                            3d 방앗간에서 제작한 모델입니다. 출력 완성품으로 저렴하게 만나실 수 있으십니다.
+                            3D 방앗간에서 제작한 모델입니다. 출력 완성품으로 저렴하게 만나실 수 있으십니다.
                             <br>장식용으로 좋습니다.
                         </p>
                     </header>
@@ -415,9 +345,9 @@
             <!-- /Section Header -->
 
 
-            <!-- Section Content -->
+          <!-- Section Content -->
             <div class="row animated fadeIn wow" data-wow-duration="0.9s">
-                <div class="col-md-8 col-md-offset-2 col-sm-12">
+                <div class="col-md-10 col-md-offset-2 col-sm-12">
                     <div class="row">
 
                         <div class="col-sm-4 col-xs-12">
@@ -427,7 +357,7 @@
                                 </div>
                                 <div class="media-body info h5">
                                     <span>Our Address</span>
-                                    서울시 강동구 천호대로 1106 sk허브 205호
+                                    서울시 강동구 천호대로 1106 <br>sk허브 205호
                                 </div>
                             </div>
                         </div>
@@ -439,7 +369,7 @@
                                 </div>
                                 <div class="media-body info h5">
                                     <span>E-mail</span>
-                                    <a href="mailto:#" style ="color:white">3dbang@naver.com</a>
+                                    <a href="mailto:custom.3dbang@gmail.com" style ="color:white">custom.3dbang@gmail.com</a>
                                 </div>
                             </div>
                         </div>
@@ -451,7 +381,7 @@
                                 </div>
                                 <div class="media-body info h5">
                                     <span>Phone Number</span>
-                                    +82 10 9098 3836
+                                    070 7797 0528
                                 </div>
                             </div>
                         </div>
@@ -485,13 +415,13 @@
 
                 <!-- Footer Logo -->
                 <div class="logo">
-                    <span class="icon_cogs"></span> 3d 방앗간
+                    <span class="icon_cogs"></span> 3D 방앗간
                 </div>
                 <!-- /Footer Logo -->
 
                 <!-- Footer Text -->
                 <p class="text">
-                    3d 프린팅으로 고객님의 상상을 현실로 만들어 주는 <br>기업을 지향하는 스타트업입니다.
+                    3D 프린팅으로 고객님의 상상을 현실로 만들어 <br>주는 기업을 지향하는 스타트업입니다.
                 </p>
                 <!-- /Footer Text -->
 
@@ -505,47 +435,6 @@
                 <!-- /Footer Social -->
 
             </div>
-            <!-- /Footer Column -->
-
-            <!-- Footer Column -->
-            <div class="col-md-3 col-sm-6 col-xs-12 footer-col">
-                <br>
-                <h4 class="title">최근 작업</h4>
-
-                <!-- Footer Post -->
-                <div class="media post">
-                    <div class="media-left">
-                        <div class="image">
-                            <img src="{% static 'images/last-post-01.jpg' %}" alt="">
-                        </div>
-                    </div>
-                    <div class="media-body">
-                        <p class="text">
-                            이런것입니다
-                        </p>
-                        <a href="#">Read more</a>
-                    </div>
-                </div>
-                <!-- /Footer Post -->
-
-                <!-- Footer Post -->
-                <div class="media post">
-                    <div class="media-left">
-                        <div class="image">
-                            <img src="{% static 'images/last-post-02.jpg' %}" alt="">
-                        </div>
-                    </div>
-                    <div class="media-body">
-                        <p class="text">
-                            멋진 핸드폰 케이스입니다
-                        </p>
-                        <a href="#">Read more</a>
-                    </div>
-                </div>
-                <!-- /Footer Post -->
-
-            </div>
-            <!-- /Footer Column -->
 
             <!-- Footer Column -->
             <div class="col-md-2 col-sm-6 col-xs-12 footer-col">
@@ -575,7 +464,16 @@
                     <a href="#" class="tag">sla</a>
                     <a href="#" class="tag">Makergear</a>
                     <a href="#" class="tag">Formlabs</a>
-                    <a href="#" class="tag">xyz</a>
+                    <a href="#" class="tag">PCB</a>
+                    <a href="#" class="tag">Artwork</a>
+                    <a href="#" class="tag">Machinelearning</a>
+                    <a href="#" class="tag">Artificial Intelligence</a>
+                    <a href="#" class="tag">Tensorflow</a>
+                    <a href="#" class="tag">Python</a>
+                    <a href="#" class="tag">Django</a>
+
+
+
                 </div>
                 <!-- /Footer Tags -->
 

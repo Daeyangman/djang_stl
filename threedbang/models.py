@@ -17,18 +17,35 @@ def user_path(instance , filename):
     return '%s/%s' % (instance.owner.username,filename)
 
 
+
 class StlFile(models.Model):
-    comment = models.CharField(max_length= 255, default = "요청사항을 기재해주세요")
+    comment = models.CharField(max_length= 255, blank=True)
     file = models.FileField(upload_to = user_path)
     owner = models.ForeignKey(settings.AUTH_USER_MODEL)
     pub_date = models.DateTimeField(auto_now_add=True)
     volume = models.IntegerField(default = 0)
     price = models.CharField(max_length = 255 ,  default ="검토중")
     time = models.CharField(max_length = 255 , default ="검토중")
-    address = models.CharField(max_length=255)
-    phone_number = models.CharField(max_length = 255)
+
     thumnail_image = models.ImageField(blank = True)
     filenamemake = models.CharField(max_length=255)
+    fdm_material_price = models.IntegerField(blank = True,default = 0)
+    fdm_time = models.IntegerField(blank = True,default = 0)
+    fdm_machine_price = models.IntegerField(blank=True,default = 0)
+    fdm_sum_price = models.IntegerField(blank=True,default = 0)
+    sla_material_price = models.IntegerField(blank=True,default = 0)
+    sla_time = models.IntegerField(blank = True,default = 0)
+    sla_machine_price = models.IntegerField(blank=True,default = 0)
+    sla_sum_price = models.IntegerField(blank=True,default = 0)
+    sla_sum_time = models.IntegerField(blank = True , default = 0)
+    fdm_sum_time = models.IntegerField(blank = True , default = 0)
+    test_a = models.CharField(blank=True , max_length=255)
+    test_b = models.CharField(blank=True, max_length = 255)
+    def sum_price(self):
+        self.save()
+        self.fdm_sum_price = self.fdm_machine_price + self.fdm_material_price
+        self.sla_sum_price = self.sla_machine_price + self.sla_material_price
+        return self.fdm_sum_price , self.sla_sum_price
     def filenameMake(self):
         self.save()
         self.filenamemake = self.file.name.split('/')[1]
@@ -40,14 +57,15 @@ class StlFile(models.Model):
         self.volume ,b,c = self.mesh.get_mass_properties()
         return self.volume
     def __str__(self):
-        return "%s %s %s %s %s" % (self.owner , self.file ,self.pub_date , self.address , self.phone_number )
+        return "%s %s %s" % (self.owner , self.file ,self.pub_date)
 
-# class CustomAddress(models.Model):
-#     owner = models.ForeignKey(settings.AUTH_USER_MODEL)
-#     address = models.CharField(max_length = 255 , default = u"여기에 주소를 입력해주세요, 구/신주소 무관")
-#     phone_number = models.IntegerField(default = u"-는 생략해주세요")
-#     def generate(self):
-#         self.save()
-#         return self.owner
-#     def __str__(self):
-#         return "%s %s %s " % (self.owner , self.address ,self.phone_number )
+
+class CustomAddress(models.Model):
+    stlfile = models.ForeignKey(StlFile)
+    author = models.ForeignKey(settings.AUTH_USER_MODEL)
+    address = models.CharField(max_length=255, blank=True)
+    detail_address = models.CharField(max_length=255, blank=True)
+    phone_number = models.CharField(max_length=255, blank=True)
+    name_user = models.CharField(max_length=255 , blank =True)
+    def __str__(self):
+        return "%s %s %s" % (self.author, self.address, self.phone_number)

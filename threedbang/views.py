@@ -1,12 +1,14 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect, get_object_or_404
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
 from django.views.generic.base import TemplateView
 from django.views.generic.edit import CreateView
-from .forms import CreateUserForm , UploadForm,UploadForm2
-from django.core.urlresolvers import reverse_lazy
+from .forms import CreateUserForm , UploadForm,AddressForm,TestForm
+from django.core.urlresolvers import reverse_lazy , reverse
 from django.contrib.auth.decorators import login_required
 from .models import StlFile
+from django.http import HttpResponseRedirect , HttpResponse
+
 import numpy as np
 from stl import mesh
 
@@ -52,16 +54,38 @@ def upload(request):
             # stl_file = form.save(file=request.FILES['file'], owner=request.user)
             # stl_file.owner = request.user
             stlfile.owner = request.user
-            stlfile.meshMake()
+            # stlfile.meshMake()
             stlfile.filenameMake()
             stlfile.save()
         return redirect('mypagelist')
     form = UploadForm()
     return render(request, 'mypage.html', {'form': form})
 
-def estimate(request, filekey):
-    stlfile = StlFile.objects.get(pk = filekey)
-    return render(request , 'estimate.html' , {'stlfile' : stlfile})
+def estimate(request,filekey):
+    # stlfile = StlFile.objects.get(pk = filekey)
+    stlfile = get_object_or_404(StlFile, pk= filekey)
+
+    if stlfile.fdm_material_price:
+        stlfile.sum_price()
+        stlfile.save()
+        return render(request, 'estimate.html', {'stlfile': stlfile})
+
+@login_required
+def address(request , address):
+    stlfile = get_object_or_404(StlFile,pk=address)
+    if request.method =='POST':
+        form = AddressForm(request.POST , request.FILES)
+        if form.is_valid():
+            addresses = form.save(commit=False)
+            addresses.stlfile = stlfile
+            addresses.author = request.user
+            addresses.save()
+            return redirect('estimate', stlfile.pk )
+    else:
+        form = AddressForm()
+    return render(request , 'customaddess.html' , {'form':form,})
+
+
 
 
 class MypageListView(ListView):

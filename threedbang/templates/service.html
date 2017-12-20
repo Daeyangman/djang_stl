@@ -56,11 +56,11 @@
                         <!-- /Toggle Button -->
 
                         <!-- Brand -->
-                        <a href="#" class="brand">
+                        <a href="{% url 'bootstrap' %}" class="brand">
 
                             <!-- Logo Big -->
                             <div class="big">
-                                <span class="icon_cogs"></span> 3D 방앗간
+                               <span class="icon_cogs"></span> 3D 방앗간
                             </div>
                             <!-- /Logo Big -->
 
@@ -80,7 +80,6 @@
                     <div id="main-menu" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
 
-                            <li><a class="smooth-scroll" href="{% url 'bootstrap' %}">홈</a></li>
                             <li><a class="smooth-scroll" href="{% url 'aboutus' %}">방앗간 소개</a></li>
                             <li><a class="smooth-scroll" href="{% url 'service' %}">제공 서비스</a></li>
 
@@ -251,127 +250,126 @@
 
 
 
-    <!-- Section: Price -->
-    <!--<section id="price" class="section bg-theme">-->
-        <!--<div class="container">-->
+    <section id="price" class="section bg-theme">
+        <div class="container">
 
-            <!--&lt;!&ndash; Section Header &ndash;&gt;-->
-            <!--<div class="row">-->
-                <!--<div class="col-md-6 col-md-offset-3">-->
-                    <!--<header class="text-center">-->
-                        <!--<h2 class="section-title underline text-white">Select Best Plan for You</h2>-->
-                        <!--<p class="section-subtitle text-white">-->
-                            <!--방앗간에서는 프린팅 서비스 이외의 설계 / 디자인 / 표면처리 등의 <br>엔지니어링 서비스도 계획예정에 있습니다-->
-                        <!--</p>-->
-                    <!--</header>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--&lt;!&ndash; /Section Header &ndash;&gt;-->
+            <!-- Section Header -->
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <header class="text-center">
+                        <h2 class="section-title underline text-white">엔지니어링 서비스</h2>
+                        <p class="section-subtitle text-white">
+                            방앗간은 대기업 연구소 출신 엔지니어들과 디자이너로 이뤄진 <br>전문적인 엔지니어링 & 디자인 기업입니다.방앗간에서는 프린팅 서비스 이외의 <br>기구설계 / 3D,2D 디자인 / PCB 설계등의 엔지니어링 서비스도 제공합니다
+                        </p><br>
+                        <p class="section-subtitle text-white">
+                            해당 서비스는 준비중이므로 필요하신 분은 <strong style = "text-decoration:underline;">아래 메일 주소</strong>로 연락 바랍니다.
+                        </p>
 
-            <!--&lt;!&ndash; Section Content &ndash;&gt;-->
-            <!--<div class="row section-content">-->
+                    </header>
+                </div>
+            </div>
+            <!-- /Section Header -->
 
-                <!--&lt;!&ndash; Plan &ndash;&gt;-->
-                <!--<div class="col-md-3 col-sm-6 animated fadeIn wow" data-wow-duration="0.9s">-->
-                    <!--<div class="plan">-->
+            <!-- Section Content -->
+            <div class="row section-content">
 
-                        <!--<div class="price">-->
-                            <!--<span class="dollar">Sanding</span>-->
-                        <!--</div>-->
+                <!-- Plan -->
+                <div class="col-md-3 col-sm-6 animated fadeIn wow" data-wow-duration="0.9s">
+                    <div class="plan">
 
-                        <!--<h3 class="name text-center">Advanced</h3>-->
+                        <div class="price">
+                            <span class="dollar">3D Modeling</span>
+                        </div>
 
-                        <!--<ul class="features">-->
-                            <!--<li>There are many variations</li>-->
-                            <!--<li>Of passages</li>-->
-                            <!--<li>Of Lorem Ipsum available</li>-->
-                            <!--<li>But the majority</li>-->
-                            <!--<li>have suffered alteration</li>-->
-                        <!--</ul>-->
+                        <h3 class="name text-center">기구설계</h3>
 
-                        <!--<a href="#" class="btn btn-theme"><i class="icon fa fa-fw fa-check"></i> <span class="text">Select Plan</span></a>-->
+                        <ul class="features">
+                            <li>간단한 3D 모델 구현</li>
+                            <li>구조해석 기반 내구성 개선 설계</li>
+                            <li>복잡한 3D 형상 구현</li>
+                            <li>웨어러블 디바이스 상세 구조</li>
+                        </ul>
 
-                    <!--</div>-->
-                <!--</div>-->
-                <!--&lt;!&ndash; /Plan &ndash;&gt;-->
+                        <a href="#" class="btn btn-theme"><i class="icon fa fa-fw fa-check"></i> <span class="text">준비중입니다.</span></a>
 
-                <!--&lt;!&ndash; Plan &ndash;&gt;-->
-                <!--<div class="col-md-3 col-sm-6 animated fadeIn wow" data-wow-duration="0.9s" data-wow-delay="0.2s">-->
-                    <!--<div class="plan">-->
+                    </div>
+                </div>
+                <!-- /Plan -->
 
-                        <!--<div class="price">-->
-                            <!--<span class="dollar">3D Modeling</span>-->
-                        <!--</div>-->
+                <!-- Plan -->
+                <div class="col-md-3 col-sm-6 animated fadeIn wow" data-wow-duration="0.9s" data-wow-delay="0.2s">
+                    <div class="plan">
 
-                        <!--<h3 class="name text-center">Advanced</h3>-->
+                        <div class="price">
+                            <span class="dollar">Design</span>
+                        </div>
 
-                        <!--<ul class="features">-->
-                            <!--<li>There are many variations</li>-->
-                            <!--<li>Of passages</li>-->
-                            <!--<li>Of Lorem Ipsum available</li>-->
-                            <!--<li>But the majority</li>-->
-                            <!--<li>have suffered alteration</li>-->
-                        <!--</ul>-->
+                        <h3 class="name text-center">2D,3D 디자인</h3>
 
-                        <!--<a href="#" class="btn btn-theme"><i class="icon fa fa-fw fa-check"></i> <span class="text">Select Plan</span></a>-->
+                        <ul class="features">
+                            <li>2D 랜더링</li>
+                            <li>3D 모델링 디자인</li>
+                            <li>UI/UX 디자인</li>
+                            <li>제품 컨셉 모델링</li>
+                        </ul>
 
-                    <!--</div>-->
-                <!--</div>-->
-                <!--&lt;!&ndash; /Plan &ndash;&gt;-->
+                        <a href="#" class="btn btn-theme"><i class="icon fa fa-fw fa-check"></i> <span class="text">준비중입니다.</span></a>
 
-                <!--&lt;!&ndash; Plan &ndash;&gt;-->
-                <!--<div class="col-md-3 col-sm-6 animated bounceIn wow" data-wow-duration="0.9s" data-wow-delay="0.6s">-->
-                    <!--<div class="plan">-->
+                    </div>
+                </div>
+                <!-- /Plan -->
 
-                        <!--<div class="price">-->
-                            <!--<span class="dollar">3D Printing</span>-->
-                        <!--</div>-->
+                <!-- Plan -->
+                <div class="col-md-3 col-sm-6 animated bounceIn wow" data-wow-duration="0.9s" data-wow-delay="0.6s">
+                    <div class="plan">
 
-                        <!--<h3 class="name text-center">Basic</h3>-->
+                        <div class="price">
+                            <span class="dollar">PCB</span>
+                        </div>
 
-                        <!--<ul class="features">-->
-                            <!--<li>There are many variations</li>-->
-                            <!--<li>Of passages</li>-->
-                            <!--<li>Of Lorem Ipsum available</li>-->
-                            <!--<li>But the majority</li>-->
-                            <!--<li>have suffered alteration</li>-->
-                        <!--</ul>-->
+                        <h3 class="name text-center">제작 및 설</h3>
 
-                        <!--<a href="#" class="btn btn-theme"><i class="icon fa fa-fw fa-check"></i> <span class="text">Select Plan</span></a>-->
+                        <ul class="features">
+                            <li>회로설계</li>
+                            <li>Artwork</li>
+                            <li>펌웨어 기능개발</li>
+                            <li>Sample PCB제작</li>
+                        </ul>
 
-                    <!--</div>-->
-                <!--</div>-->
-                <!--&lt;!&ndash; /Plan &ndash;&gt;-->
+                        <a href="#" class="btn btn-theme"><i class="icon fa fa-fw fa-check"></i> <span class="text">준비중입니다.</span></a>
 
-                <!--&lt;!&ndash; Plan &ndash;&gt;-->
-                <!--<div class="col-md-3 col-sm-6 animated fadeIn wow" data-wow-duration="0.9s" data-wow-delay="0.4s">-->
-                    <!--<div class="plan">-->
+                    </div>
+                </div>
+                <!-- /Plan -->
 
-                        <!--<div class="price">-->
-                            <!--<span class="dollar">Painting</span>-->
-                        <!--</div>-->
+                <!-- Plan -->
+                <div class="col-md-3 col-sm-6 animated fadeIn wow" data-wow-duration="0.9s" data-wow-delay="0.4s">
+                    <div class="plan">
 
-                        <!--<h3 class="name text-center">Advanced</h3>-->
+                        <div class="price">
+                            <span class="dollar">AI(인공지능)</span>
+                        </div>
 
-                        <!--<ul class="features">-->
-                            <!--<li>There are many variations</li>-->
-                            <!--<li>Of passages</li>-->
-                            <!--<li>Of Lorem Ipsum available</li>-->
-                            <!--<li>But the majority</li>-->
-                            <!--<li>have suffered alteration</li>-->
-                        <!--</ul>-->
+                        <h3 class="name text-center">Advanced</h3>
 
-                        <!--<a href="#" class="btn btn-theme"><i class="icon fa fa-fw fa-check"></i> <span class="text">Select Plan</span></a>-->
+                        <ul class="features">
+                            <li>인공지능 알고리즘 개발</li>
+                            <li>파이썬 업무자동화 프로그램 개발</li>
+                            <li>비트코인 자동거래매매 프로그램 개발</li>
+                            <li>딥러닝 기반 토탈 솔루션 제공</li>
+                        </ul>
 
-                    <!--</div>-->
-                <!--</div>-->
-                <!--&lt;!&ndash; /Plan &ndash;&gt;-->
+                        <a href="#" class="btn btn-theme"><i class="icon fa fa-fw fa-check"></i> <span class="text">준비중입니다.</span></a>
 
-            <!--</div>-->
-            <!--&lt;!&ndash; /Section Content &ndash;&gt;-->
+                    </div>
+                </div>
+                <!-- /Plan -->
 
-        <!--</div>-->
-    <!--</section>-->
+            </div>
+            <!-- /Section Content -->
+
+        </div>
+    </section>
 
 
 
@@ -394,9 +392,9 @@
             <!-- /Section Header -->
 
 
-            <!-- Section Content -->
+         <!-- Section Content -->
             <div class="row animated fadeIn wow" data-wow-duration="0.9s">
-                <div class="col-md-8 col-md-offset-2 col-sm-12">
+                <div class="col-md-10 col-md-offset-2 col-sm-12">
                     <div class="row">
 
                         <div class="col-sm-4 col-xs-12">
@@ -406,7 +404,7 @@
                                 </div>
                                 <div class="media-body info h5">
                                     <span>Our Address</span>
-                                    서울시 강동구 천호대로 1106 sk허브 205호
+                                    서울시 강동구 천호대로 1106 <br>sk허브 205호
                                 </div>
                             </div>
                         </div>
@@ -418,7 +416,7 @@
                                 </div>
                                 <div class="media-body info h5">
                                     <span>E-mail</span>
-                                    <a href="mailto:#" style ="color:white">3dbang@naver.com</a>
+                                    <a href="mailto:custom.3dbang@gmail.com" style ="color:white">custom.3dbang@gmail.com</a>
                                 </div>
                             </div>
                         </div>
@@ -430,7 +428,7 @@
                                 </div>
                                 <div class="media-body info h5">
                                     <span>Phone Number</span>
-                                    +82 10 9098 3836
+                                    070 7797 0528
                                 </div>
                             </div>
                         </div>
@@ -455,6 +453,7 @@
 <!-- /Main -->
 
 <!-- Footer -->
+<!-- Footer -->
 <footer class="footer section section-small no-pb bg-light-gray">
     <div class="container">
         <div class="row">
@@ -464,13 +463,13 @@
 
                 <!-- Footer Logo -->
                 <div class="logo">
-                    <span class="icon_cogs"></span> 3d 방앗간
+                    <span class="icon_cogs"></span> 3D 방앗간
                 </div>
                 <!-- /Footer Logo -->
 
                 <!-- Footer Text -->
                 <p class="text">
-                    3d 프린팅으로 고객님의 상상을 현실로 만들어 주는 <br>기업을 지향하는 스타트업입니다.
+                    3D 프린팅으로 고객님의 상상을 현실로 만들어 <br>주는 기업을 지향하는 스타트업입니다.
                 </p>
                 <!-- /Footer Text -->
 
@@ -484,47 +483,6 @@
                 <!-- /Footer Social -->
 
             </div>
-            <!-- /Footer Column -->
-
-            <!-- Footer Column -->
-            <div class="col-md-3 col-sm-6 col-xs-12 footer-col">
-                <br>
-                <h4 class="title">최근 작업</h4>
-
-                <!-- Footer Post -->
-                <div class="media post">
-                    <div class="media-left">
-                        <div class="image">
-                            <img src="{% static 'images/last-post-01.jpg' %}" alt="">
-                        </div>
-                    </div>
-                    <div class="media-body">
-                        <p class="text">
-                            이런것입니다
-                        </p>
-                        <a href="#">Read more</a>
-                    </div>
-                </div>
-                <!-- /Footer Post -->
-
-                <!-- Footer Post -->
-                <div class="media post">
-                    <div class="media-left">
-                        <div class="image">
-                            <img src="{% static 'images/last-post-02.jpg' %}" alt="">
-                        </div>
-                    </div>
-                    <div class="media-body">
-                        <p class="text">
-                            멋진 핸드폰 케이스입니다
-                        </p>
-                        <a href="#">Read more</a>
-                    </div>
-                </div>
-                <!-- /Footer Post -->
-
-            </div>
-            <!-- /Footer Column -->
 
             <!-- Footer Column -->
             <div class="col-md-2 col-sm-6 col-xs-12 footer-col">
@@ -534,7 +492,7 @@
                 <!-- Footer Menu -->
                 <ul class="menu">
                     <li><a href="{% url 'bootstrap' %}">홈</a></li>
-                    <li><a href="{% url 'aboutus' %}">방앗간 제품</a></li>
+                    <li><a href="{% url 'aboutus' %}">방앗간 소개</a></li>
                     <li><a href="{% url 'service' %}">다양한 서비스</a></li>
                     <li><a href="{% url 'mypage' %}">나의 방앗간</a></li>
                     <li><a href="{% url 'login' %}">로그인 하기</a></li>
@@ -554,7 +512,16 @@
                     <a href="#" class="tag">sla</a>
                     <a href="#" class="tag">Makergear</a>
                     <a href="#" class="tag">Formlabs</a>
-                    <a href="#" class="tag">xyz</a>
+                    <a href="#" class="tag">PCB</a>
+                    <a href="#" class="tag">Artwork</a>
+                    <a href="#" class="tag">Machinelearning</a>
+                    <a href="#" class="tag">Artificial Intelligence</a>
+                    <a href="#" class="tag">Tensorflow</a>
+                    <a href="#" class="tag">Python</a>
+                    <a href="#" class="tag">Django</a>
+
+
+
                 </div>
                 <!-- /Footer Tags -->
 
